@@ -1,0 +1,315 @@
+/**
+ * Responsible on customizing the Stripe wizard
+ */
+var StripeWizard = {
+
+    setNewMethod: function(elem, paymentWizard)
+    {
+        //deploy xds, will be use later
+        if(typeof jotFormxds === 'undefined') {
+            Utils.loadScript('js/libraries/xds-server/jotFormxds.js');
+        }
+
+        var self = this;
+        var prop = elem.retrieve('properties');
+        var d = prop.connect.value,
+            client_id = ( prop.allowTest && prop.allowTest.value === 'true' ) ? d.client_id_test : d.client_id_live, 
+            apiKey = ( prop.allowTest && prop.allowTest.value === 'true' ) ? d.apiKey_test : d.apiKey_live,
+            href = d.url + '?response_type=' + d.response_type + '&scope=' + d.scope + '&stripe_landing=' + d.stripe_landing + '&client_id=' + client_id,
+            span = new Element('span').insert( prop.connect.text ),
+            hiddenk = new Element('input', {
+                type : "hidden",
+                id : 'payment_publishableKey',
+                value : d.publishableKey,
+                "data-connect" : "stripe"
+            }), button = new Element('button', {
+                "data-link" : href,
+                id: "stripe-connect-btn",
+                className : "stripe-connect-btn"
+            }).insert(span).observe('click', function(){
+                var windowFeatures = 'height=500,width=700,toolbar=0,status=0,resizable=0,location=0,menuBar=0',
+                    elemTold = elem.retrieve("properties"),
+                    apisKey = $$("#payment_defaults #payment_apiKey")[0].getValue(),
+                    errorsDiv = $$(".payment-questions #error-message-div")[0],
+                    stripeConnectButton = $$(".payment-questions #payment_defaults #stripe-connect-btn")[0],
+                    publishableKeyHidden = $$(".payment-questions #payment_defaults #payment_publishableKey")[0],
+                    stripePopup = window.open( this.readAttribute("data-link"), d.name, windowFeatures);
+
+                stripeConnectButton.buttonprop = function(type) {
+                    if ( type === "disabled" ) {
+                        this.writeAttribute("disabled", "disabled").writeAttribute("onclick", "return false;");
+                    } else if ( type === "enabled" ) {
+                        this.removeAttribute("disabled"); this.removeAttribute("onclick");
+                    } return this;
+                };
+
+                stripeConnectButton.buttonprop("disabled").update(self.stripeMsg.connecting);
+
+                //will determine if the popup window is close
+                //and get the code given by stripe connect
+                var windowTimer = window.setInterval(function() {
+                    if (stripePopup && stripePopup.closed !== false)
+                    {
+                        window.clearInterval(windowTimer);
+
+                        //get the stripe code
+                        var x = new jotFormxds();
+                        var localDataLoaded = false;
+                        //get the item that was saved earlier
+                        x.getItem('stripeCode', function(val, response){
+                            if (!localDataLoaded && val) {
+                                localDataLoaded = true;
+                                Utils.Request({
+                                    parameters: {
+                                        action: "getStripeConnectCode", 
+                                        stripeCode: val, 
+                                        // client_secret : apisKey,
+                                        allowTest : prop.allowTest.value
+                                    },
+                                    onSuccess: function(res) {
+
+                                        //get connect properties
+                                        var connectProp = elemTold.connect.value;
+
+                                        //hide errors if any
+                                        errorsDiv.hide();
+
+                                        //set the button to disabled and some attributes
+                                        stripeConnectButton.buttonprop("disabled").update(self.stripeMsg.connected);
+
+                                        //set public key extracted from the token
+                                        publishableKeyHidden.setValue(res.message.stripe_publishable_key);
+                                        connectProp.publishableKey = res.message.stripe_publishable_key;
+
+                                        //make the button disabled
+                                        connectProp.button_disabled = true;
+
+                                        //set the accesstoken or the api key of the form owner
+                                        connectProp.access_token = res.message.access_token;
+
+                                        //set the stripe connect is initiated
+                                        connectProp.stripeConnectLoaded = true;
+
+                                        //update everything
+                                        elem.setProperty("connect", connectProp);
+
+                                        //reset the old API method if it has a value
+                                        elem.setProperty("apiKey", "");
+                                        elem.setProperty("publishableKey", "");
+
+                                        //remove item
+                                        x.removeItem('stripeCode');
+                                    },
+                                    onFail: function(res) {
+                                        Utils.alert(res.error, "Error!",function(){
+                                            stripeConnectButton.buttonprop("enabled").update(self.stripeMsg.sdefault);
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    }
+                }, 500);
+            }), hiddenf = new Element('input', {
+                type : "hidden",
+                id : "payment_apiKey",
+                value : apiKey,
+                "data-connect" : "stripe"
+            });
+
+        //modify the stripe button if any
+        if (d.button_disabled) {
+            button.writeAttribute("disabled","disabled").writeAttribute("onclick", "return false;").update(self.stripeMsg.connected);
+        }
+
+        //build the label and button of the stripe connect
+        var labelT = new Element('label').setStyle({"margin-top":"8px"}).insert(prop.connect.text);
+        var pT = new Element('p').insert(button).insert(hiddenf).insert(hiddenk);
+
+        //initiate other hacks when shift to new from old
+        var apikeyInput = $$(".payment-questions #payment_defaults #payment_apiKey")[0],
+            pubKeyInput = $$(".payment-questions #payment_defaults #payment_publishableKey")[0],
+            testBox     = $$(".payment-questions #payment_defaults #payment_allowTest")[0],
+            paymentsDiv = $$(".payment-questions #payment_defaults")[0],
+            errorsDiv   = $$(".payment-questions #error-message-div")[0];
+        if (apikeyInput) { apikeyInput.up('div').remove(); }
+        if (pubKeyInput) { pubKeyInput.up('div').remove(); }
+        if (testBox)     {
+            testBox.up('div').show();
+            if ( prop.allowTest && prop.allowTest.value === 'true' ) {
+                testBox.writeAttribute("checked", "checked");
+                testBox.checked = true;
+            } else {
+                testBox.removeAttribute("checked");
+                testBox.checked = false;
+            }
+        }
+        if (errorsDiv)   { errorsDiv.up('div').show(); }
+        if (paymentsDiv) { paymentsDiv.insert({top:new Element('div').insert(labelT).insert(pT)}); }
+
+        //deploy events for the button at the wizard
+        paymentWizard.buttons.stripeAPIkey.show();
+        paymentWizard.buttons.stripeAPIkey.changeTitle('Enter Stripe API Key Instead'.locale());
+        paymentWizard.buttons.stripeAPIkey.onclick = function(){
+            self.setOldMethod(elem, paymentWizard);
+
+            //set to use the old method upon of wizard
+            var props = prop.connect.value;
+            props.oldMethod = true;
+            elem.setProperty('connect', props);
+        }
+    },
+
+    setOldMethod: function(elem, paymentWizard)
+    {
+        //get the current properties of the stripe
+        var self = this;
+        var prop = elem.retrieve('properties'),
+            apiKeyInput = new Element('div').insert(new Element('label')
+                             .insert(prop.apiKey.text))
+                             .insert(new Element('input',{ type:"text", id:"payment_apiKey", size:50, value: prop.apiKey.value }).setStyle({width:"286px"})),
+            pubKeyInput = new Element('div').insert(new Element('label')
+                             .insert(prop.publishableKey.text))
+                             .insert(new Element('input',{ type:"text", id:"payment_publishableKey", value: prop.publishableKey.value, size:50}).setStyle({width:"286px"}));
+
+        //remove stripe connect
+        var connectProp = elem.getProperty('connect');
+            connectProp.publishableKey = '';
+            connectProp.button_disabled = false;
+            connectProp.access_token = '';
+            connectProp.stripeConnectLoaded = false;
+        elem.setProperty('connect', connectProp);
+        elem.setProperty('allowTest', 'false');
+
+        //initiate other hacks when shift to old from new
+        var stripeBtn   = $$(".payment-questions #payment_defaults #stripe-connect-btn")[0],
+            testBox     = $$(".payment-questions #payment_defaults #payment_allowTest")[0],
+            paymentsDiv = $$(".payment-questions #payment_defaults")[0],
+            errorsDiv   = $$(".payment-questions #error-message-div")[0];
+        if (stripeBtn) { stripeBtn.up('div').remove(); }
+        if (testBox)   { testBox.up('div').hide(); }
+        if (errorsDiv) { errorsDiv.hide(); }
+        if (paymentsDiv) { paymentsDiv.insert({top:pubKeyInput}).insert({top:apiKeyInput}); }
+
+        //deploy events for the button at the wizard
+        paymentWizard.buttons.stripeAPIkey.show();
+        paymentWizard.buttons.stripeAPIkey.changeTitle('Use Stripe Connect instead'.locale());
+        paymentWizard.buttons.stripeAPIkey.onclick = function(){
+            self.setNewMethod(elem, paymentWizard);
+
+            //set to use the new method upon of wizard
+            var props = prop.connect.value;
+            props.oldMethod = false;
+            elem.setProperty('connect', props);
+        }
+    },
+
+    process: function(k, v, elem, div, paymentWizard)
+    {
+        var self = this;
+        var isEnabled = true, showToAllUsers = true;
+
+        //stripe connect button custom messages
+        self.stripeMsg = {
+            connecting : new Element('span').insert("Connecting with Stripe..."),
+            connected  : new Element('span').insert("Stripe Connected"),
+            sdefault   : new Element('span').insert("Connect with Stripe")
+        };
+
+        //additional float div, hack for floats
+        self.floatDiv = new Element('div').setStyle({'clear':'both'});
+        self.mainProperties = [
+            'connect', 'allowTest', 'attachCustomerID',
+            'currency', 'laterCharge', 'billingAdd'
+        ];
+
+        if ( self.mainProperties.indexOf(k) > -1 )
+        {
+            if (k==="connect" && isEnabled && showToAllUsers )
+            {
+                //set what to show
+                if (v.value.oldMethod) {
+                    self.setOldMethod(elem, paymentWizard);
+                } else {
+                    self.setNewMethod(elem, paymentWizard);
+                }
+            }
+            else if ( (k==="allowTest" || k==="attachCustomerID") && isEnabled && showToAllUsers )
+            {
+                var checkboxELem = new Element('input', {
+                    type : "checkbox",
+                    id : "payment_" + k,
+                    value : v.value,
+                    "data-connect" : "stripe"
+                }).observe('click',function(){
+
+                    //set the allowtest value to check
+                    elem.setProperty(k, (this.checked) ? 'true' : 'false' );
+
+                    //set values for api inputs
+                    if ( k==="allowTest" )
+                    {
+                        var button = $('stripe-connect-btn'),
+                            props = elem.getProperty('connect');
+
+                        $('payment_apiKey').setValue( (this.checked) ? props.apiKey_test : props.apiKey_live );
+                        $('payment_publishableKey').setValue(''); //reset public key
+
+                        //modify the stripe button
+                        var client_id = (this.checked) ? props.client_id_test : props.client_id_live, href = props.url + '?response_type=' + props.response_type + '&scope=' + props.scope + '&stripe_landing=' + props.stripe_landing + '&client_id=' + client_id;
+
+                        if( button.hasAttribute("disabled") ) { button.removeAttribute("disabled"); }
+                        if( button.hasAttribute("onclick") ) { button.removeAttribute("onclick"); }
+
+                        button.writeAttribute("data-link", href);
+                        button.update(self.stripeMsg.sdefault);
+                    }
+                });
+
+                div.insert(new Element('label').insert(v.text)).insert(checkboxELem).insert(self.floatDiv);
+
+                //modifu allow test checkbox if any
+                if( v.value && v.value === 'true' ) {
+                    checkboxELem.writeAttribute("checked", "checked");
+                    checkboxELem.checked = true;
+                } else {
+                    checkboxELem.removeAttribute("checked");
+                    checkboxELem.checked = false;
+                }
+
+                //hack to hide the test mode when default to show old method
+                var prop = elem.getProperty('connect');
+                if (prop.oldMethod) {
+                    checkboxELem.up('div').hide();
+                }
+            }
+            else if (k==="currency" || k==="laterCharge" || k==="billingAdd")
+            {
+                div.insert(new Element('label').insert(v.text));
+                var sel = new Element('select', { id: 'payment_' + k }).setStyle({width:"120px"});
+                $A(v.dropdown).each(function(o){ sel.appendChild(new Element('option', { value: o[0] }).insert(o[1])); });
+                
+                //add additional option for billing address-all control_addres
+                if (k==="billingAdd")
+                {
+                    var addList = $$("#stage li[data-type='control_address']");
+                    $A(addList).each(function(o){
+                        var id = o.id
+                          , qid = id.split('_')[1]
+                          , text = o.select("#label_"+qid)[0].innerHTML;
+
+                        sel.appendChild(new Element('option', { value: qid }).insert(text));
+                    });
+                }
+
+                //select the current value and append to div cont
+                sel.selectOption(v.value);
+                div.insert(sel).insert(self.floatDiv);
+            }
+
+        } else if (!isEnabled && showToAllUsers) {
+            div.insert(new Element('label').insert(v.text));
+            div.insert(new Element('input', { id: 'payment_' + k, value: v.value, size: v.size || '20' })).insert(self.floatDiv);
+        }
+	}
+};

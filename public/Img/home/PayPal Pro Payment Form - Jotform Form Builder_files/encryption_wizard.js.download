@@ -1,0 +1,309 @@
+/* exported EncryptionKeyWizard */
+var EncryptionKeyWizard = window.Wizardo || (function() {
+  var username = null;
+  var password = null;
+  var root = {};
+  var isSuccess = false;
+
+  function checkCredentials(username) {
+    password = document.getElementById('passwd').value;
+    if(password === '' | password == null) {
+      document.getElementById('passwordError').innerHTML = 'Password should not be empty!'.locale();
+      document.getElementById('passwordError').style.display = 'block';
+    } else {
+      _xdr('/API/user/login', 'post', serialize({username: username, password: password}),
+        function(res) {
+          res = JSON.parse(res);
+          if(res['responseCode'] == 200 && res['message'] === 'success') {
+            document.getElementById('passwordError').style.display = 'none';
+            document.getElementById('page0').style.display = 'none';
+            document.getElementById('page1').style.display = 'block';
+          } else {
+            document.getElementById('passwordError').innerHTML = 'Wrong password!'.locale();
+            document.getElementById('passwordError').style.display = 'block';
+          }
+        },
+        function(err) {
+          document.getElementById('passwordError').innerHTML = 'Something went wrong!'.locale();
+          document.getElementById('passwordError').style.display = 'block';
+        }
+      );
+    }
+  }
+
+  root.open = function(options) {
+
+    options = options || {};
+
+    var previousDimmers = document.querySelectorAll('.w_modal_dimmer');
+    if(previousDimmers.length > 0) {
+      return;
+    }
+
+    var container = document.body,
+        innerWidth = _getWindowDimensions().width,
+        dimmer = document.createElement("div"),
+        frame = document.createElement('IFRAME'),
+        wrapperDiv = document.createElement("div"),
+        margin = (innerWidth - 450) / 2,
+        closeButton = document.createElement("a"),
+        ref = document.location.href;
+    dimmer.setAttribute("id", "w_modal_dimmer");
+    dimmer.className = "w_modal_dimmer";
+    dimmer.style.position = "fixed";
+    dimmer.style.width = "100%";
+    dimmer.style.height = "100%";
+    dimmer.style.top = "0";
+    dimmer.style.left = "0";
+    dimmer.style.zIndex = "999999";
+    // handle IE8 errors
+    try {
+        dimmer.style.background = "rgba(0,0,0,0.7)";
+    } catch (e) {
+        console.log("IE8 Error: rgba is not valid for prehistoric browsers");
+    }
+
+    wrapperDiv.setAttribute("id", "w_modal_wrapper");
+    wrapperDiv.style.position = "absolute";
+    wrapperDiv.style.top = 0;
+    wrapperDiv.style.right = 0;
+    wrapperDiv.style.bottom = 0;
+    wrapperDiv.style.left = 0;
+    wrapperDiv.style.zIndex = 9999;
+    wrapperDiv.style.marginLeft = margin + "px";
+    // wrapperDiv.style.width = "450px";
+
+    closeButton.style.display = "block";
+    closeButton.style.left = "200px";
+    _setTextContent(closeButton, 'Close X');
+    // handle IE8 errors
+    try {
+        closeButton.style.backgroundColor = "transparent";
+    } catch (e) {
+        console.log("IE8 Error: rgba is not valid for prehistoric browsers");
+    }
+    closeButton.style.color = "white";
+    closeButton.style.fontSize = "14px";
+    closeButton.style.padding = "5px 8px";
+    closeButton.style.cursor = "pointer";
+    closeButton.style.styleFloat = "right";
+    closeButton.style.cssFloat = "right";
+
+    closeButton.onclick = function() {
+        _removeElement("w_modal_dimmer");
+    };
+
+    wrapperDiv.appendChild(closeButton);
+
+    dimmer.appendChild(wrapperDiv);
+
+    container.appendChild(dimmer);
+
+    var ss = document.createElement("link");
+    ss.type = "text/css";
+    ss.rel = "stylesheet";
+    ss.href = "/encrypted-forms/assets/css/wizard.min.css";
+    document.getElementsByTagName("head")[0].appendChild(ss);
+
+    _xdr('/encrypted-forms/wizard1-c.html', 'get', false, function(resp){
+      wrapperDiv.innerHTML = resp;
+      translateModalTexts(wrapperDiv);
+      if(!options.keyExists) {
+        document.getElementById('keyExists').style.display = 'none';
+        document.getElementById('useOldKey').style.display = 'none';
+      }
+      // use existing keys
+      document.getElementById('useOldKey').addEventListener('click', function(){
+          isSuccess = true;
+          document.getElementById('page1').style.display = 'none';
+          document.getElementById('page4').style.display = 'block';
+          document.getElementById('encBack').style.display = 'none';
+      });
+      document.getElementById('confirmPassword').addEventListener('click', function() {
+        var a = document.getElementById('confirmPassword');
+        if(username == null) {
+          _xdr('/API/user', 'get', serialize({}),
+            function(res) {
+              res = JSON.parse(res);
+              if(res['responseCode'] == 200 && res['message'] === 'success') {
+                username = res['content']['username'];
+                checkCredentials(username);
+              } else {
+                document.getElementById('passwordError').innerHTML = 'Something went wrong!';
+                document.getElementById('passwordError').style.display = 'block';
+              }
+            },
+            function(err) {
+              document.getElementById('passwordError').innerHTML = 'Something went wrong!';
+              document.getElementById('passwordError').style.display = 'block';
+            }
+          );
+        } else {
+          checkCredentials(username);
+        }
+        
+      });
+      //create key
+      document.getElementById('createEncKey').addEventListener('click', function(){
+        var a = document.getElementById("createEncKey");
+        a.innerHTML = '<img src="/img/keyload.gif">';
+        JotEncrypted.generateNewKeys(function(keys) {
+
+          var privateKey = keys.privateKey;
+          privateKey = privateKey.replace('-----BEGIN RSA PRIVATE KEY-----↵', '').replace('↵-----END RSA PRIVATE KEY-----', '');
+          var publicKey = keys.publicKey.replace('-----BEGIN RSA PUBLIC KEY-----↵', '').replace('↵-----END RSA PUBLIC KEY-----', '');
+
+          JotEncrypted.setPrivateKey(keys.privateKey);
+          _xdr('/API/user/settings', 'post', serialize({ publicKey: keys.publicKey, currentPassword: password }),
+            function() {
+              if (typeof Utils !== 'undefined' && Utils.user) {
+                Utils.user.publicKey = keys.publicKey;
+              }
+              JotEncrypted.downloadPrivateKey();
+            },
+            function() {}
+          );
+          isSuccess = true;
+          document.getElementById('page1').style.display = 'none';
+          document.getElementById('page2').style.display = 'block';
+          document.getElementById('encBack').style.display = 'block';
+          document.getElementById("createEncKey").innerHTML = 'Create encryption keys for me'.locale();
+
+        });
+      }, false);
+
+      //upload key
+      document.getElementById('uploadKey').addEventListener('click', function() {
+
+        var els = document.querySelectorAll('.encryption-content');
+        for(var i=0; i<els.length; i++) {
+          els[i].style.display = 'none';
+        }
+        document.getElementById('page3').style.display = 'block';
+        document.getElementById('encBack').style.display = 'block';
+      });
+
+      //set file input
+      var uploadEvent;
+      document.getElementById("uploadBtn").addEventListener('change', function(e){
+          document.getElementById("uploadFile").value = this.value.replace(/^.*\\/, "");;
+          JotEncrypted.loadPublicKey(e.target.files, function(){
+             _xdr('/API/user/settings', 'post', serialize({ publicKey: JotEncrypted.getPublicKey(), currentPassword: password }),
+              function() {
+                if (typeof Utils !== 'undefined' && Utils.user) {
+                  Utils.user.publicKey = JotEncrypted.getPublicKey();
+                }
+                isSuccess = true;
+                document.getElementById('page3').style.display = 'none';
+                document.getElementById('page4').style.display = 'block';
+                document.getElementById('encBack').style.display = 'none';
+             }, function() {
+             });
+          });
+      });
+
+      //close
+      document.getElementById('closeEncryptionWizard').addEventListener('click', function() {
+        _removeElement('w_modal_dimmer');
+        if(typeof options.onClose === 'function') {
+          options.onClose(isSuccess);
+        }
+      });
+
+      //go back
+      document.getElementById('encBack').addEventListener('click', function() {
+        var els = document.querySelectorAll('.encryption-content');
+        for(var i=0; i<els.length; i++) {
+          els[i].style.display = 'none';
+        }
+
+        document.getElementById('page1').style.display = 'block';
+        document.getElementById('encBack').style.display = 'none';
+      });
+    }, function() {
+
+    });
+
+  }
+
+  function _getWindowDimensions() {
+    var viewportwidth,
+        viewportheight;
+     // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+    if (window.innerWidth !== undefined) {
+        viewportwidth = window.innerWidth;
+        viewportheight = window.innerHeight;
+    } else if (document.documentElement !== undefined && document.documentElement.clientWidth !== undefined && document.documentElement.clientWidth !== 0) {
+        viewportwidth = document.documentElement.clientWidth;
+        viewportheight = document.documentElement.clientHeight;
+    } else {
+        viewportwidth = document.getElementsByTagName('body')[0].clientWidth;
+        viewportheight = document.getElementsByTagName('body')[0].clientHeight;
+    }
+    return {
+        width: viewportwidth,
+        height: viewportheight
+    };
+  };
+  function _setTextContent(element, text) {
+    while (element.firstChild!==null)
+        element.removeChild(element.firstChild); // remove all existing content
+    element.appendChild(document.createTextNode(text));
+  };
+  function _xdr(url, method, data, callback, errback) {
+    var req;
+    if(XMLHttpRequest) {
+      req = new XMLHttpRequest();
+
+      if('withCredentials' in req) {
+        req.open(method, url, true);
+        req.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        req.onerror = errback;
+        req.onreadystatechange = function() {
+            if (req.readyState === 4) {
+                if (req.status >= 200 && req.status < 400) {
+                  callback(req.responseText);
+                  return;
+                    var resp = JSON.parse(req.responseText);
+                    if(resp.responseCode === 400) {
+                        errback(resp.message);
+                        return;
+                    }
+                    callback(resp)
+                    //callback(JSON.parse(req.responseText).content);
+                } else {
+                    errback(new Error('Response returned with non-OK status'));
+                }
+            }
+        };
+        req.send(data);
+      }
+    } else if(XDomainRequest) {
+      req = new XDomainRequest();
+      req.open(method, url);
+      req.onerror = errback;
+      req.onload = function() {
+          callback(req.responseText);
+      };
+      req.send(data);
+    } else {
+      errback(new Error('CORS not supported'));
+    }
+  };
+  function _removeElement(EId){
+    return (EObj = document.getElementById(EId)) ? EObj.parentNode.removeChild(EObj) : false;
+  }
+  function serialize(data) {
+      var str = [];
+      for(var p in data)
+         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(data[p]));
+      return str.join("&");
+  }
+  function translateModalTexts(modalDiv) {
+    var textElements = modalDiv.getElementsByClassName('locale');
+    for(var i = 0; i < textElements.length; i++) {
+      textElements[i].innerHTML = textElements[i].innerHTML.trim().locale();
+    }
+  }
+  return root;
+})();

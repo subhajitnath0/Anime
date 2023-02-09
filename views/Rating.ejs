@@ -1,0 +1,34 @@
+<%- include('header') %>
+<div>
+    
+        <div class="buy">
+
+
+            <div class="bill glass">
+                <h3 class="color-m">
+                    <i class="fas fa-smile"></i>
+                    <br>
+                    Thanks <%= name %>
+                    <br>
+                    <br>
+                    PLease Rating Me
+                    <br>
+                </h3>
+
+                <form action="/" method="post">
+                    <i id="Star1" onclick="Star(1);" class="fa fa-star" style="font-size:23px"></i>
+                <i id="Star2" onclick="Star(2);" class="fa fa-star" style="font-size:23px"></i>
+                <i id="Star3" onclick="Star(3);" class="fa fa-star" style="font-size:23px"></i>
+                <i id="Star4" onclick="Star(4);" class="fa fa-star" style="font-size:23px"></i>
+                <i id="Star5" onclick="Star(5);" class="fa fa-star" style="font-size:23px"></i>
+
+                <button type="submit" class="btn btn-outline-light custom">
+                    <div class="amount-btn">
+                        Submit
+                    </div>
+                </form>
+            </div>
+        </div>
+
+</div>
+<%- include('footer') %>

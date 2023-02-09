@@ -1,0 +1,96 @@
+@font-face {
+ font-family: "Circular";
+ src: url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-Light.woff2) format("woff2"), url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-Light.woff) format("woff");
+ font-display: swap;
+ font-style: normal;
+ font-weight: 300;
+}
+
+@font-face {
+ font-family: "Circular";
+ src: url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-ThinItalic.woff2) format("woff2"), url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-ThinItalic.woff) format("woff");
+ font-display: swap;
+ font-style: italic;
+ font-weight: 100;
+}
+
+@font-face {
+ font-family: "Circular";
+ src: url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-BoldItalic.woff2) format("woff2"), url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-BoldItalic.woff) format("woff");
+ font-display: swap;
+ font-style: italic;
+ font-weight: 700;
+}
+
+@font-face {
+ font-family: "Circular";
+ src: url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-BlackItalic.woff2) format("woff2"), url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-BlackItalic.woff) format("woff");
+ font-display: swap;
+ font-style: italic;
+ font-weight: 900;
+}
+
+@font-face {
+ font-family: "Circular";
+ src: url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-Thin.woff2) format("woff2"), url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-Thin.woff) format("woff");
+ font-display: swap;
+ font-style: normal;
+ font-weight: 100;
+}
+
+@font-face {
+ font-family: "Circular";
+ src: url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-Black.woff2) format("woff2"), url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-Black.woff) format("woff");
+ font-display: swap;
+ font-style: normal;
+ font-weight: 900;
+}
+
+@font-face {
+ font-family: "Circular";
+ src: url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-Medium.woff2) format("woff2"), url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-Medium.woff) format("woff");
+ font-display: swap;
+ font-style: normal;
+ font-weight: 500;
+}
+
+@font-face {
+ font-family: "Circular";
+ src: url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-Bold.woff2) format("woff2"), url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-Bold.woff) format("woff");
+ font-display: swap;
+ font-style: normal;
+ font-weight: 700;
+}
+
+@font-face {
+ font-family: "Circular";
+ src: url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-Book.woff2) format("woff2"), url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-Book.woff) format("woff");
+ font-display: swap;
+ font-style: normal;
+ font-weight: 400;
+}
+
+@font-face {
+ font-family: "Circular";
+ src: url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-LightItalic.woff2) format("woff2"), url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-LightItalic.woff) format("woff");
+ font-display: swap;
+ font-style: italic;
+ font-weight: 300;
+}
+
+@font-face {
+ font-family: "Circular";
+ src: url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-BookItalic.woff2) format("woff2"), url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-BookItalic.woff) format("woff");
+ font-display: swap;
+ font-style: italic;
+ font-weight: 400;
+}
+
+@font-face {
+ font-family: "Circular";
+ src: url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-MediumItalic.woff2) format("woff2"), url(https://cdn.jotfor.ms/fonts/circular/fonts/Circular-MediumItalic.woff) format("woff");
+ font-display: swap;
+ font-style: italic;
+ font-weight: 500;
+}
+

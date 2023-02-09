@@ -1,0 +1,1210 @@
+/* Product List Element //////////////// */
+.rightPanel #app_wizards .add-integration a.btn:before {
+    background-image: url(https://cdn.jotfor.ms/assets/img/payments/add_integration_grey.svg) !important;
+    background-repeat: no-repeat !important;
+    background-size: 24px !important;
+    background-position: center;
+    padding-left: 34px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    padding: 8px 0;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.rightPanel #app_wizards .add-integration p {
+    line-height: 16px !important;
+    font-size: 12px !important;
+    margin-bottom: 0 !important;
+}
+
+.rightPanel #app_wizards textarea.textBox {
+    width: 100% !important;
+    min-width: auto !important;
+    max-width: 100%;
+}
+
+.moodular.rightPanel #app_wizards .paymentsWizardV4 .u-narrow.isDisabled .flipSwitch-slider {
+    background: #535f70;
+    opacity: 0.5;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .productSearchSettingsEditor .category_list {
+    margin-top: 12px !important;
+    height: auto !important;
+    padding: 1px 8px !important;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .productSearchSettingsEditor .category_list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .productSearchSettingsEditor .category_list .line.columnV4 {
+    display: flex !important;
+    margin-top: 0 !important;
+    position: relative;
+}
+.rightPanel #app_wizards .field_disabled .column {
+    opacity: 0.5;
+    cursor: inherit;
+    pointer-events: none;
+}
+
+.rightPanel #app_wizards .field_disabled .column input {
+    color: #FFFFFF !important;
+}
+
+.productSearchSettingsEditor .category_list .line span {
+    cursor: move;
+    border: 0px solid rgb(48, 51, 59);
+    padding: 0px 4px;
+    display: inline-block;
+    border-right: 0;
+    border-radius: 2px 0 0 2px;
+    background-color: #1ea0f1;
+    color: #ffffff;
+    padding-top: 6px;
+    width: 28px;
+    height:46px;
+    position: relative;
+    padding-top: 24px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.productSearchSettingsEditor .category_list li {
+    position: relative;
+    background-color: white;
+    padding: 0;
+    margin-bottom: 6px;
+    border-radius: 3px;
+    height: 46px;
+    margin: 6px 0 6px 0;
+}
+.productSearchSettingsEditor .category_list li > div.line.columnV4 {
+    margin-top: 0 !important;
+}
+
+.productSearchSettingsEditor .category_list .line span:before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 9px;
+    height: 1px;
+    left: 6px;
+    opacity: .5;
+    box-shadow: 0 5px 0 #fff, 0 7px 0 #fff, 0 9px 0 #fff;
+    transition: all .15s ease;
+}
+
+.productSearchSettingsEditor .category_list li li {
+    margin-bottom: 0px;
+    height: 36px;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .productSearchSettingsEditor .category_list .line input[type="text"] {
+    border: 0px solid rgb(48, 51, 59) !important;
+    display: inline-block;
+    border-radius: 0 2px 2px 0 !important;
+    cursor: text;
+    background-color: #FFFFFF !important;
+    color: #000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 6px 0 6px!important;
+    height: 30px !important;
+    margin-top: 8px !important;
+    margin-left: 6px !important;
+    margin-right: 6px !important;
+    box-shadow: none;
+    max-width: 278px;
+    line-height: 28px;
+    cursor: text !important;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .productSearchSettingsEditor .category_list .line > .inpt:hover {
+    background-color: #EEE !important;
+}
+
+.productSearchSettingsEditor .category_list .line .dropdown_btn {
+    color: #B4B9BF;
+    right: 0;
+    position: relative;
+    background-color: #1ea0f1;
+    border: 0;
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/add_product.svg');
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 6px;
+    margin-top: 7px;
+    visibility: hidden;
+    border-radius: 2px;
+    border-radius: 3px;
+}
+
+.productSearchSettingsEditor .category_list .line .delete_btn {
+    color: #B4B9BF;
+    right: 0;
+    position: relative;
+    background-color: #1ea0f1;
+    border: 0;
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/trash_btn.svg');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    visibility: hidden;
+    padding: 0;
+    min-width: 32px;
+    margin-top: 7px;
+    margin-right: 6px;
+    border-radius: 3px;
+}
+
+.productSearchSettingsEditor .category_list .line:hover .delete_btn,
+.productSearchSettingsEditor .category_list .line:hover .dropdown_btn {
+    visibility: visible;
+}
+
+.productSearchSettingsEditor .category_list .line .delete_btn:hover,
+.productSearchSettingsEditor .category_list .line .dropdown_btn:hover {
+    opacity: 0.8;
+}
+
+.productSearchSettingsEditor .category_list .line .dropdown_btn.btn_clicked {
+    background-color:#31333b;
+}
+
+.productSearchSettingsEditor .category_list .line ul {
+    position: absolute;
+    background-color: #31333b;
+    border: 1px solid rgb(48, 51, 59) !important;
+    padding: 4px 4px;
+    width: 226px;
+    top: 7px;
+    right: 80px;
+    z-index: 99;
+    border-radius: 2px;
+    max-height: 200px;
+    overflow:hidden;
+    overflow-y: auto;
+}
+
+.productSearchSettingsEditor .category_list .line ul::-webkit-scrollbar-thumb {
+    background: #202020; 
+    border-radius: 4px;
+    border: 2px solid #31333b; 
+}
+
+.productSearchSettingsEditor .category_list .line ul::-webkit-scrollbar {
+    width: 8px;
+    background-color: #31333b;
+    border-radius: 4px;
+    border: 0;
+}
+.productSearchSettingsEditor .category_list .line ul li {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    background-color: #31333b;
+    margin-top: 0;
+}
+
+.productSearchSettingsEditor .category_list .line ul li:hover {
+    background-color: #2a2c33;
+    border-radius: 3px;
+}
+
+
+.productSearchSettingsEditor .category_list .line ul li label {
+    margin-left: 6px;
+    cursor: pointer;
+    width: 176px !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.productSearchSettingsEditor .category_list .line ul span {
+    background-color: transparent;
+    border: 0;
+    color: #b4b9c0 !important;
+    padding: 0 6px;
+    height: 32px;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.productSearchSettingsEditor .category_list .line ul input[type="checkbox"] {
+    cursor: pointer !important;
+    margin-left: 4px;
+}
+#app_wizards .ji-pw_Options:before,
+#tethers .ji-pw_Options:before,
+.tethers .ji-pw_Options:before {
+    content: "\002B" !important;
+    display: inline-block;
+    font-size: x-large;
+    float: left;
+    line-height: 29px;
+    padding-left: 10px;
+}
+
+#app_wizards .ji-pw_Quantity_v3:before,
+#tethers .ji-pw_Quantity_v3:before,
+.tethers .ji-pw_Quantity_v3:before {
+    content: "\002B" !important;
+    display: inline-block;
+    font-size: x-large;
+    float: left;
+    line-height: 29px;
+    padding-left: 10px;
+}
+.rightPanel #app_wizards .itemBox .category-dropdown .m-dropdownWrapper {
+    border-color: #DDD;
+    background: #FFFFFF;
+    color: #666;
+    border-radius: 2px;
+    margin-top: 4px;
+    box-shadow: none;
+    height: 28px;
+    line-height: 12px;
+    overflow: hidden;
+    padding-right: 28px !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 154px;
+    display: inline-block;
+}
+
+.rightPanel #app_wizards .itemBox .category-dropdown .m-dropdownWrapper:hover {
+    border-color: #CCC !important;
+    box-shadow: 0 2px 4px rgba(86,70,50,.1);
+}
+
+.rightPanel #app_wizards .itemBox .category-dropdown .m-dropdownWrapper .m-dropdownMask {
+    background-color: #FFFFFF;
+    padding: 0;
+    width: 26px;
+    height: 26px;
+}
+
+.rightPanel #app_wizards .itemBox .category-dropdown .m-dropdownWrapper .m-dropdownMask:after {
+    background-color: #DDD;
+    left: 0;
+}
+
+.rightPanel #app_wizards .itemBox .category-dropdown .m-dropdownWrapper:hover .m-dropdownMask:after {
+    background-color: #CCC;
+    left: 0;
+}
+
+.rightPanel #app_wizards .itemBox .category-dropdown .m-dropdownWrapper .m-dropdownMask:before {
+    border:0;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='10' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2357647E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 24px;
+    height: 26px;
+    display: block;
+    top: 0;
+    right: 0;
+}
+
+.rightPanel #app_wizards .itemBox .multiselect-list .checkBox {
+    background-color: white;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    color: #666;
+}
+/* Dropdown settings pannel */
+#tethers .multiselect-list {
+    background-color: #31333b !important;
+    width: 354px;
+    margin-left: 0px;
+    border: 0;
+    padding: 4px 0;
+    border-radius: 1px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+}
+
+#tethers .multiselect-list li label.checkBox {
+    background-color: #31333b !important;
+    color: #949fae!important;
+    display: block !important;
+    line-height: 18px;
+    padding: 6px 14px !important;
+    display: flex !important;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 2px !important;
+}
+
+#tethers .multiselect-list li label.checkBox:hover {
+    background-color: #2a2c33 !important;
+}
+
+#tethers .multiselect-list li label.checkBox .checkBox-label {
+    display: block !important;
+    padding-left: 18px !important;
+}
+
+#tethers .multiselect-list li label.checkBox input {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+}
+/* E.O Dropdown settings pannel */
+
+#tethers.product-category-tether .multiselect-list {
+    border:1px solid #DDD;
+    padding: 4px;
+    background-color: #ffffff !important;
+    width: 230px;
+    border-radius: 1px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+}
+
+#tethers.product-category-tether .multiselect-list li .checkBox {
+    background-color: #FFFFFF !important;
+    padding: 6px 8px !important;
+}
+
+#tethers.product-category-tether .multiselect-list li .checkBox .checkBox-label {
+    display: block;
+}
+
+#tethers.product-category-tether .multiselect-list li:hover .checkBox {
+    background-color: #EAEAEA !important;
+    border-radius: 3px;
+}
+
+#tethers.product-category-tether .multiselect-list li .checkBox .checkBox-label {
+    color: #464646 !important;
+    display: block !important;
+}
+
+#tethers.product-category-tether .multiselect-list li .checkBox span:before {
+   border: 1px solid #BBB !important;
+   border-radius: 2px !important;
+   box-shadow: none !important;
+}
+
+/* E.O. Product list CATEGORY field //////////////// */
+
+/* Product list LAYOUT field //////////////// */
+
+.productListLayoutType {
+    display: flex;
+    width: 100%;
+    padding-top:12px;
+}
+.productListLayoutType div {
+    width: 33.33333%;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #31333b;
+    display: block;
+    padding-top: 62px;
+    box-sizing:border-box;
+    margin-right: 12px;
+    color: #8e98a7;
+    background-repeat: no-repeat;
+    background-position: center top 0px;
+    background-size: 60px;
+    position: relative;
+    border-radius: 3px;
+    background-color: #525e70;
+    cursor: pointer;
+}
+.productListLayoutType div.checked {
+    background-color: #1ba0f0;
+}
+.productListLayoutType div span {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -28px;
+}
+.productListLayoutType div:nth-child(1) {
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/list_view.svg');
+}
+.productListLayoutType div:nth-child(2) {
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/card_view_2col.svg');
+}
+.productListLayoutType div:nth-child(3) {
+    margin-right: 0;
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/card_view_3col.svg');
+}
+/* Pay Later field //////////////// */
+.rightPanel #app_wizards .paymentsWizardV4 .customElementsArea.mainCard.moreSpace.isFormWrapper {
+    padding-bottom: 20px !important;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .customElementsArea > div {
+    margin-top: 0px !important;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .customElementsArea h5 {
+    padding-bottom: 20px !important;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .hasCustomElementsArea.mainCard.moreSpace.isFormWrapper {
+    padding-bottom: 20px !important;
+
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .hasCustomElementsArea > div:first-child {
+    display: none;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .hasCustomElementsArea h5 {
+    padding-bottom: 20px !important;
+}
+/* E.O. Pay Later field //////////////// */
+
+.rightPanel #app_wizards .paymentsWizardV4 .line:not(.original-buttons) .btn,
+.rightPanel #app_wizards .paymentsWizardV4 .line:not(.original-buttons) .btn.upload_btn {
+    background-color: #0099ff;
+    border: 1px solid #0099ff;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .line:not(.original-buttons) .btn:hover {
+    background-color: #4bb7ff !important;
+    border-color: #2f333a !important;
+}
+
+.line.selected-gateway-info {
+    background-color: #333b44;
+    margin: 1px -20px -20px !important;
+    padding: 20px;
+    align-items: center;
+    color: #ffffff;
+    font-weight: bold;
+    border-top: 1px solid #333a43;
+}
+.line.selected-gateway-info span {
+    margin-right: 12px;
+    float: left;
+    height: 50px;
+    width: 142px;
+    padding: 13px 6px;
+}
+.line.selected-gateway-info img {
+    margin-right:12px;
+    float: left;
+    border-radius: 3px;
+}
+.line.selected-gateway-info button {
+    width: 42px;
+    height: 42px;
+    margin-left: 4px;
+    float: left;
+    margin-top: 4px;
+    background-color: #3e464e;
+    border: 1px solid #31333c;
+    color: #ffffff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.line.selected-gateway-info button:hover {
+    background-color: #09f;
+}
+.line.selected-gateway-info button i{
+    font-size: 22px;
+}
+.line.selected-gateway-info button.gateway-switch {
+    background-image: url(//cdn.jotfor.ms/assets/img/v4/payment_icons/PG-switch.svg);
+    background-size: 30px;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+.line.selected-gateway-info button.gateway-remove {
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/trash_gateway.svg');
+    background-size: 22px;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.connection_alert {
+    clear: both;
+    background-color: #F15656;
+    height: 32px;
+    margin-top: 60px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 42px;
+    border-radius: 2px;
+    position: relative;
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/disconnect.svg');
+    background-size: 22px;
+    background-repeat:no-repeat;
+    background-position: left 10px center;
+}
+.connection_alert:before{
+    content: "";
+    display: block;
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #F15656;
+    position: absolute;
+    top: -8px;
+    right: 104px;
+}
+
+.paymentsettings .spanel_back_btn {
+    position: absolute;
+    color: #A5AAB0 !important;
+    right: 8px;
+    top: 10px;
+    display: block;
+    background-color: #2F333B;
+    text-transform: uppercase;
+    padding: 0 12px 0 24px;
+    font-size: 14px;
+    border-radius: 2px;
+    line-height: 30px;
+    cursor: pointer;
+    border: 0;
+}
+
+.paymentsettings .spanel_back_btn:before {
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/sp_back_icon.svg');
+    background-position: left 8px center;
+    background-repeat: no-repeat;
+    content: '';
+    width: 16px;
+    height: 30px;
+    position: absolute;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    background-size: 8px;
+    opacity: 0.6;
+}
+
+/* Payment Settings Modal */
+
+.productConfirmationModal {
+    position: absolute;
+    background-color: #262C3D;
+    width: 94%;
+    left: 3%;
+    top: 23px;
+    border-radius: 3px;
+    color: #ffffff;
+    z-index: 9999999;
+}
+.productConfirmationModal > p {
+    font-size:15px;
+    padding: 0 44px 0 78px;
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/alert_blue.svg');
+    background-position: left 26px center;
+    background-size: 32px;
+    line-height: 18px;
+    background-repeat: no-repeat;
+}
+.productConfirmationModal > button {
+    border: 0;
+    background-color: transparent;
+    color: #ffF;
+    position: absolute;
+    width:44px;
+    height: 44px;
+    top: 20px;
+    right:0;
+    color: transparent;
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/close_white.svg');
+    background-repeat: no-repeat;
+    background-position: top right 16px;
+    background-size: 14px;
+    cursor: pointer;
+}
+.productConfirmationModal .modalActions {
+    width: 100%;
+    border-top: 1px solid #191c25;
+    padding:12px;
+    text-align: center;
+}
+
+.productConfirmationModal .modalActions button {
+    height: 36px;
+    border-radius: 3px;
+    padding: 0 20px;
+    min-width:100px;
+    line-height: 33px;
+    cursor: pointer;
+}
+.productConfirmationModal .modalActions button:nth-child(1) {
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+}
+
+.productConfirmationModal .modalActions button:nth-child(2) {
+    border: 0;
+    background-color: #2F90FF;
+    color: #fff;
+}
+
+.paymentSettingsSave {
+    padding: 20px;
+    background-color: #3E464F;
+    border-top: 1px solid #333b44;
+    border-radius: 1px;
+    color: #b4b9be;
+    position: fixed;
+    bottom: -80px;
+    left: 0;
+    width: 100%;
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: left 20px center;
+    z-index: 99 !important;
+    transition: transform 0.8s;
+    text-align: center;
+    display: none;
+}
+
+.rightPanelOpened .paymentSettingsSave { 
+    display: block;
+}
+
+.paymentSettingsSave a {
+    width: 80%;
+    margin: 0 auto !important;
+    text-align: center;
+    float: none !important;
+}
+
+@keyframes SHW {
+    from {
+    transform: translate(0px, 80px);
+    }
+    to {
+    transform: translate(0px, -80px);
+    }
+}
+
+.paymentSettingsSave.active {
+    animation: SHW .8s;
+    animation-fill-mode: both;
+}
+
+#builderProductList .itemBox .card .card-leftSide {
+    flex-direction: column;
+}
+
+/* Product Options with Drag&Drop feature */
+
+#productOptionsTable .customTable .customTable-row {
+    display: flex;
+}
+
+#productOptionsTable .customTable .customTable-row td {
+    max-height: 50px;
+    border-radius: 3px;
+}
+
+#productOptionsTable .customTable .customTable-row td:nth-child(1),
+#productOptionsTable .customTable .customTable-row td:nth-child(1):hover  {
+    background-image: url("https://cdn.jotfor.ms/assets/img/payments/DD_icon.svg") !important;
+    background-repeat: no-repeat !important;
+    background-size: 8px !important;
+    background-position: left 7px center !important;
+    padding-left: 24px;
+    cursor: move;
+    width: auto !important;
+}
+
+#productOptionsTable .customTable .customTable-row:last-child td:nth-child(1) {
+    background-image: none !important;
+    cursor: auto;
+    pointer-events: all !important;
+    user-select: all !important;
+}
+
+#productOptionsTable .customTable .customTable-row:last-child td:last-child {
+    background-image: none !important;
+    cursor: auto;
+    background-image: url("https://cdn.jotfor.ms/assets/img/payments/edit_pencil.svg") !important;
+    background-size: 20px !important;
+    background-position: right 12px center !important;
+    background-repeat: no-repeat !important;
+    pointer-events: none;
+    user-select: none;
+}
+
+#productOptionsTable .customTable .customTable-row:last-child td:last-child input {
+    color: #535f6f !important; 
+}
+
+#productOptionsTable .customTable .customTable-row td:hover {
+    background: transparent !important;
+}
+
+#productOptionsTable .customTable .customTable-row td input {
+    padding-left: 8px;
+    border-radius: 3px;
+}
+
+.sortable-chosen.sortable-drag {
+    overflow: hidden;
+    border-radius: 3px;
+    opacity: 0.8;
+}
+
+.sortable-chosen.sortable-drag input {
+    background-color: #3687c5 !important;
+    color: #AAA !important;
+    display: flex;
+    height: 38px !important;
+    box-sizing: border-box;
+    line-height: normal;
+    border: none;
+    padding-left: 12px;
+}
+
+.payment-settings-panel-error-message {
+    border: 1px solid #535F70;
+    padding: 12px 12px 12px 52px;
+    background-image: url("https://cdn.jotfor.ms/assets/img/payments/payment_warning_settings.svg") !important;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: left 18px center;
+    color: #929CAB;
+    display: block;
+    font-size: 13px;
+    line-height: 15px;
+    border-radius: 3px;
+    width: 100%;
+    margin-top: 6px;
+}
+
+
+
+/* product list badge  */
+#app_wizards #builderProductList .itemBox .itemBox-content,
+#tethers #builderProductList .itemBox .itemBox-content {
+    padding: 12px 12px 12px 32px !important;
+}
+
+.rightPanel #builderProductList .itemBox-actions,
+.rightPanel #builderProductList .itemBox-actions {
+    position: absolute;
+    right: -120px !important;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    padding: 8px;
+    height: 100%;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(256, 256, 256, 0.8);
+}
+
+.rightPanel #builderProductList .itemBox:hover .itemBox-actions,
+.rightPanel #builderProductList .itemBox:hover .itemBox-actions{
+     transition: all 0.5s ease;
+     right: 0 !important;
+}
+
+.rightPanel #builderProductList .itemBox-menu.isVisible ~ .itemBox-actions {
+    background: transparent !important;  
+}
+
+.rightPanel #builderProductList .itemBox {
+    overflow: hidden;
+    border: 0 !important;
+}
+
+.rightPanel #builderProductList .itemBox-actions a.btn {
+    height: 30px;
+}
+
+.isMobile .rightPanel #builderProductList .itemBox .itemBox-actions {
+    display: none !important;
+}
+
+.rightPanel #builderProductList .itemBox .payment-stock-badge {
+    font-size: 11px;
+    color: white;
+    border-radius: 2px;
+    width: 76px;
+    display: block;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.rightPanel #builderProductList .itemBox .payment-stock-badge.sold-out {
+    background-color: #F15656;
+}
+
+.rightPanel #builderProductList .itemBox .payment-stock-badge.low-stock,
+.rightPanel #builderProductList .itemBox .payment-stock-badge.check-stock {
+    background-color: #FAD58D;
+    color: #9A6700;
+}
+
+.rightPanel #builderProductList .card-leftSide > div {
+    width: 76px !important;
+    height: 60px !important;
+    min-height: 40px;
+    max-height: 60px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 !important;
+    border: 1px solid #eaeaea;
+    border-radius: 2px;
+}
+
+.rightPanel #builderProductList .card-leftSide > div img {
+    max-width: 76px !important;
+    max-height: 60px !important;
+}
+
+.rightPanel.isPayment .tabContent #builderProductList .itemBox .itemBox-wrapper {
+    display: flex;
+}
+
+/* Payment Settings Modal */
+
+/* E.O. Product List Element //////////////// */
+
+
+/* Gateway integration panels */
+
+.rightPanel #app_wizards .paymentsWizardV4 .fieldsPanel-header.gateway-header {
+    background-color: #353A41 !important;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 60px;
+    border-bottom: 1px solid #4b5260;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .fieldsPanel-header.gateway-header .fieldsPanel-headerText {
+    background: #3e4652;
+    background-color: unset;
+    color: #ffffff;
+    padding: 0;
+}
+
+.fieldsPanel-header.gateway-header .gateway-header-container {
+    width: 100%;
+    padding-left: 58px;
+    padding-top: 21px;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .fieldsPanel-header.gateway-header .g-logo {
+    content: "";
+    display: block;
+    background-size: 34px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    border-radius: 3px;
+    top: 12px;
+    left: 12px;
+}
+
+.gateway-header span.g-info-btn {
+    border: 1px solid #fff;
+    display: inline-block;
+    opacity: 0.5;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 8px;
+    line-height: 14px;
+    position: absolute;
+    top: 23px;
+    padding-right: 1px;
+}
+
+.gateway-header span.g-info-btn:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.gateway-header .g-header-description {
+    color:#969FAD;
+}
+
+.gateway-header .fieldsPanel-headerClose {
+    line-height: 60px!important;
+}
+
+.rightPanel.paymentsettings .paymentsWizardV4 .fieldsPanel-container .gateway-generic-container {
+  margin-top: 12px;
+}
+
+/* E.O. Gateway integration panels ////////////////// */
+
+/* Connect btn */
+
+.rightPanel #app_wizards .paymentsWizardV4 .modal-actions p {
+    background-color: #FF6363;
+    border-radius: 4px;
+    color: #ffffff !important;
+    padding: 12px 12px 12px 58px !important;
+    line-height: initial;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: left 16px center;background-image: url(https://cdn.jotfor.ms/assets/img/payments/alert_light_grey.svg);
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .line:not(.columnV4) [class="column one two"] .btnContainer .connectBtn {
+  text-align: center;
+  padding: 8px 10px !important;
+  box-shadow: 0 2px 4px #272b31;
+  box-sizing: border-box;
+  transition: none;
+  cursor: pointer;
+  border-radius: 2px;
+  position: relative;
+  font-size: 15px;
+  color: #FFF;
+  width: 100%;
+  background-color:#09f;
+  line-height:21px;
+  height: 38px;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .line:not(.columnV4) [class="column one two"] .btnContainer .connectBtn a:not(.btn) {
+  color:white;
+  cursor:pointer;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .line:not(.columnV4) [class="column one two"] .btnContainer.connected .connectBtn {
+  background-color: #44B46F;
+}
+
+.connectBtn .check-icon,
+.connectBtn .downArrow,
+.connectBtn .disconnectField {
+  display: none;
+}
+
+.btnContainer.connected .connectBtn .check-icon {
+ display: inline-block;
+}
+
+.btnContainer.connected .connectBtn .downArrow {
+ display:block;
+}
+
+.btnContainer.connected .connectBtn .downArrow {
+    position:absolute;
+    right: 0;
+    top: 0;
+    width: 38px;
+    height:38px;
+    border-left: 1px solid #3DA264;
+}
+.btnContainer.connected .connectBtn .downArrow:before {
+    content:"";
+    position:absolute;
+    left: 0;
+    top: 0;
+    height:38px;
+    border-left: 1px solid #69C38C;
+}
+
+.btnContainer.connected .connectBtn .downArrow:after{
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 9px solid #FFF;
+  position: absolute;
+  top: 16px;
+  right: 12px;
+}
+
+.btnContainer.connected .connectBtn .check-icon:after {
+  content:"";
+  display:inline-block;
+  width:16px;
+  height:16px;
+  line-height:38px;
+  background-image: url(https://cdn.jotfor.ms/assets/img/payments/connection-check-icon.svg) !important;
+  background-size: 12px;
+  background-position: top 0.44em left;
+  background-repeat: no-repeat;
+  margin-left: -14px;
+  transform: rotate(-24deg);
+}
+
+.btnContainer.connected .connection-dropdown {
+  background-color: #fff;
+  width:auto;
+  min-width:100%;
+  position: absolute;
+  color:#000;
+  text-align:center;
+  line-height:38px;
+  top: 42px;
+  right: 0px;
+  border-radius: 2px;
+  display: none;
+  z-index: 999;
+}
+
+.btnContainer.connected .connection-dropdown li {
+  height:42px;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom:1px solid #DDD;
+}
+
+.btnContainer.connected .connection-dropdown li:last-child {
+  border-bottom:0px solid #DDD;
+}
+
+.btnContainer.connected .connection-dropdown li:before {
+  content: "";
+  display:inline-block;
+  height: 38px;
+  width: 35px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px;
+  margin-left: -16px;
+}
+
+.btnContainer.connected .connection-dropdown li.disconnectField:before {
+  background-image: url("https://cdn.jotfor.ms/assets/img/payments/disconnect_apm.png");
+}
+
+.btnContainer.connected .connection-dropdown li.switch:before {
+  background-image: url("https://cdn.jotfor.ms/assets/img/payments/switch_apm.png");
+  background-size: 13px;
+}
+
+.btnContainer.connected .connection-dropdown.show {
+  display: block;
+}
+
+#app_wizards .paymentsWizardV4 .mainCard.moreSpace.isFormWrapper .btnContainer.connected .connection-dropdown li {
+  color: black !important;
+}
+
+.moodular .paymentsWizardV4 .toolTip.u-tethered {
+  background-color: #fff;
+  color: #000;
+  border-radius: 2px;
+  width: 100%;
+  margin-top: -4px;
+  font-size: 13px;
+  text-align:center
+}
+
+/* Right Pane tooltip of ClickBank Integration */
+
+.moodular:not([data-type="control_clickbank"]) .paymentsWizardV4 .toolTip.u-tethered {
+    width: 100% !important;
+}
+
+.moodular .paymentsWizardV4 .toolTip.u-tethered:after {
+  left: 14px;
+  right: unset;
+  border-color: transparent transparent #fff;
+}
+
+/* APM Box Selection (Gateway Selection Panel) START */
+
+.apm-box-selection {
+  clear: both;
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.apm-box-selection button {
+  width: 182px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  flex: 1;
+  border: 1px solid #2F3339;
+  border-radius: 4px;
+  transition: 0.15s !important;
+}
+
+.apm-box-selection button.isSelected {
+  color: #fff;
+  background-color: #0099FF;
+}
+
+.apm-box-selection .square {
+  background-image: url(https://cdn.jotfor.ms/assets/img/payments/square_in_apm.svg);
+  background-size: 94px;
+}
+
+.apm-box-selection .square.isSelected {
+  background-image: url(https://cdn.jotfor.ms/assets/img/payments/square_in_apm_w.svg);
+}
+
+.apm-box-selection .stripecheckout {
+  background-image: url(https://cdn.jotfor.ms/assets/img/payments/stripe_in_apm.svg);
+  background-size: 80px;
+}
+
+.apm-box-selection .stripecheckout.isSelected {
+  background-image: url(https://cdn.jotfor.ms/assets/img/payments/stripe_in_apm_w.svg);
+}
+
+/*
+
+.apm-box-selection .mollie {
+  background-image: url(https://cdn.jotfor.ms/assets/img/payments/mollie_in_apm.svg);
+  background-size: 84px;
+}
+
+.apm-box-selection .mollie.isSelected {
+  background-image: url(https://cdn.jotfor.ms/assets/img/payments/mollie_in_apm_w.png);
+}
+
+*/
+
+/* APM Box Selection (Gateway Selection Panel) END */
+
+/* Tooltip */

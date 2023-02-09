@@ -1,0 +1,159 @@
+.nav-bar{
+    position:sticky;
+    top: 0;
+    right: 0;
+    width: 99%;
+    z-index: 9;
+    justify-content: center;
+
+}
+.logo img {
+    width: 50px;
+    display: none;
+}
+
+.navSub {
+    display: grid;
+    grid-template-columns: auto auto;
+    background: linear-gradient(320deg,#f27121,#e94057,#8a2387);
+}
+
+.brand  {
+    padding: 15px;
+    margin-left: 30px;
+    animation: Sol 3s ;
+}
+
+@keyframes Sol{
+    
+    0%{padding-left: 50%}
+
+    100% {padding-left: 0%}
+ }
+.brand a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+.manubutan {
+    list-style: none;
+    display: inline-flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    animation: Solo 3s ;
+}
+
+
+.naveItem {
+    display: block;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.naveItem a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+    align-items: center;
+    align-content: center;
+}
+
+
+.dropdown-menu{
+    margin-top: 10px;
+    background: linear-gradient(320deg,#f27121,#e94057,#8a2387);
+ }
+
+@media screen and (max-width: 768px) {
+    .manubutan{
+        display: none;
+    }
+    .logo img {
+        width: 30px;
+        display: block;
+        position: absolute;
+        filter: invert(1);
+        padding: 10px;
+        top: 10px;
+        right: 30px;
+        width: 50px;
+    }
+
+    .navSub {
+        display: block;
+        grid-template-columns: auto auto;
+        
+    }
+
+
+    .manubutan.show {
+        padding-top: 0px;
+        list-style: none;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        text-align: center;
+        height: 50vh;
+        animation: Solo 3s ;
+    }
+
+    .logo.show{
+        transform: rotate(90deg);
+        width: 30px;
+        display: block;
+        position: absolute;
+        padding: 10px;
+        top: 55px;
+        right: 10px;
+        z-index: 10;
+    }
+
+    .naveItem {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+   .dropdown-menu{
+    margin-top: 10px;
+    background: linear-gradient(320deg,#f27121,#e94057,#8a2387);
+    margin: 0px;
+    width: 100vw;
+    text-align: center;
+ }
+
+}
+
+@keyframes Solo{
+    
+    0%{padding-right: 50%;
+        
+    }
+
+    100% {padding-right: 0%;
+    }
+ }
+
+ 
+
+
+ /* landing */
+
+ .carousel-caption {
+    color: rgb(197, 195, 195);
+    font-size: 200%;
+    text-decoration:dotted;
+    text-shadow: 50px  black;
+
+ }
+
+ .carousel{
+    border: 3px solid rgba(54, 54, 54, 0.616);
+ }
+
+ .body{
+    overflow: hidden;
+    
+ }

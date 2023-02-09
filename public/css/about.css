@@ -1,0 +1,113 @@
+.about{
+    margin-top: 2px;
+    background-color: rgba(124, 123, 123, 0.281);
+    background: linear-gradient(320deg,#f27121,#e94057,#8a2387);  
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0px;
+    margin: 2px;
+ 
+}
+
+.glass{
+    background: rgba(255, 255, 255, 0.171);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.226);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    margin: 5px;
+}
+
+
+.Text_style4 {
+
+    white-space: nowrap;
+    font-weight: bold;
+    overflow: hidden;
+    letter-spacing: 5px;
+    border-right: 4px solid rgb(0, 43, 0);
+    animation: text4 5s steps(16) alternate infinite;
+    color: rgb(255, 255, 255);
+}
+
+
+@keyframes text4 {
+    0% {
+        width: 0;
+    }
+
+    90% {
+        width: 7ch;
+    }
+
+    100% {
+        width: 7ch;
+    }
+}
+
+.content{
+    margin: 1% 20%;
+    padding: 20px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 15;
+
+}
+
+.content a{
+    float: left;
+    margin-left: 20px;
+}
+
+.content a button{
+    padding: 10px 20px;
+}
+
+.aboutcontent{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+}
+
+.oder-img img{
+   height: 200px;
+   margin-right: 20px;
+
+}
+
+@media screen and (max-width: 1184px) {
+    .oder-img img{
+        height: 240px;
+        margin-right: 20px;
+     
+     }
+}
+
+@media screen and (max-width: 912px) {
+    .oder-img img{
+        height: 270px;
+        margin-right: 20px;
+     
+     }
+}
+
+@media screen and (max-width: 908px) {
+    .oder-img {
+        display: none;
+     
+     }
+}
+
+
+
+@media screen and (max-width: 522px) {
+    .content{margin: 5% 10%
+        ;}
+}
+

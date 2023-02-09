@@ -1,0 +1,749 @@
+/* stylelint-disable */
+
+/* PAYMENT FEATURES CSS */
+
+/* filter-container start */
+/* When we enable search category and  and sort */
+/*.p-filter-one-column if enable only one of them  we are adding that class to label */
+/*.p-filter-two-column if enable two of them  we are adding that class to label */
+/*.p-filter-three-column if enable three of them  we are adding that class to label */
+
+.filter-container  {
+    display: flex;
+    justify-content: flex-end;
+    width:100%;
+    margin-bottom: 12px;
+}
+.filter-container .select-area,
+.filter-container #productSearch-input {
+  background-color: #F9F9FF;
+  border-color: #E0E6F0;
+}
+
+#productSearch-input,
+#payment-category-dropdown .select-area,
+#payment-sorting-products-dropdown .select-area {
+    height: 40px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 15px;
+    background-repeat: no-repeat;
+}
+#productSearch-input {
+    padding: 0 22px 0 8px;
+    background-image: url("https://cdn.jotfor.ms/assets/img/builder/search_icon.png");
+    background-size: 14px;
+    background-position: right 12px center;
+}
+#payment-category-dropdown .select-area {
+    padding-left: 8px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='10' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2357647E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: center right 10px;
+}
+
+#payment-sorting-products-dropdown .select-area {
+    padding-left: 8px;
+    background-image: url("https://cdn.jotfor.ms/assets/img/payments/sort_icon.png");
+    background-position: center right 10px;
+    background-size: 16px;
+}
+
+#productSearch-input::placeholder {
+  color: #8A94A9;
+  font-family: Inter,sans-serif;
+}
+.p-filter-one-column + .form-input-wide {
+    position: static !important;
+}
+.p-filter-one-column + .form-input-wide #payment-category-dropdown,
+.p-filter-one-column + .form-input-wide #productSearch-input,
+.p-filter-one-column + .form-input-wide #payment-sorting-products-dropdown,
+.p-filter-one-column + .form-input-wide #payment-category-dropdown .select-content,
+.p-filter-one-column + .form-input-wide .payment-dropdown .select-content {
+    min-width: 185px;
+    width: auto;
+}
+.p-filter-two-column + .form-input-wide #payment-category-dropdown,
+.p-filter-two-column + .form-input-wide #productSearch-input,
+.p-filter-two-column + .form-input-wide #payment-sorting-products-dropdown,
+.p-filter-two-column + .form-input-wide #payment-category-dropdown .select-content,
+.p-filter-two-column + .form-input-wide .payment-dropdown .select-content {
+    width: calc(50% - 4px) !important;
+}
+.p-filter-two-column + .form-input-wide .filter-container,
+.p-filter-three-column + .form-input-wide .filter-container {
+    justify-content: space-between;
+}
+.p-filter-three-column + .form-input-wide #payment-category-dropdown,
+.p-filter-three-column + .form-input-wide #productSearch-input,
+.p-filter-three-column + .form-input-wide #payment-sorting-products-dropdown,
+.p-filter-three-column + .form-input-wide #payment-category-dropdown .select-content,
+.p-filter-three-column + .form-input-wide .payment-dropdown .select-content {
+    width: calc(33% - 4px)  !important;
+}
+
+
+.p-filter-two-column + .form-input-wide,
+.p-filter-three-column + .form-input-wide {
+    padding-top: 8px;
+}
+
+li[data-type="control_paymentmethods"] > .form-input-wide {
+    padding-top: 0 !important;
+    margin-top: 8px !important;
+}
+
+.form-product-item.not-found,
+.form-product-item.not-found~br {
+    display: none !important;
+}
+
+.category-enabled ~ div #payment-category-dropdown {
+    order: 2;
+}
+
+#payment-sorting-products-dropdown {
+    order: 3;
+}
+
+/* .clear-option is used when you select an option from sort */
+#payment-sorting-products-dropdown.option-selected .dropdown-hint,
+#payment-sorting-products-dropdown:not(.option-selected) .clear-option{
+    display: none;
+}
+
+.dropdown-container .select-content .clear-option {
+    background-color: #f3f3fe;
+    margin: 0 -8px -2px -8px;
+    border-top: 1px solid #f0f0fb;
+    padding:  8px !important;
+}
+
+#payment-category-dropdown .dropdown-hint,
+.payment-dropdown .dropdown-hint {
+    margin-right: 4px;
+    color: #8A94A9;
+}
+
+#payment-category-dropdown .selected-values,
+.payment-dropdown .selected-value {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#payment-category-dropdown .select-content,
+.payment-dropdown .select-content {
+    padding: 2px 8px;
+    position: absolute;
+    z-index: 9;
+    display: none;
+    font-size: 14px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    margin-top: 4px;
+}
+
+#payment-category-dropdown .select-content .option,
+.payment-dropdown .select-content .option {
+    overflow: hidden;
+    display: flex;
+    padding: 6px 0;
+    align-items: center;
+    position: relative;
+}
+
+#payment-category-dropdown .select-content span,
+.payment-dropdown .select-content span {
+    white-space: nowrap;
+    padding-left: 8px;
+    display: flex;
+    padding-right: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#payment-category-dropdown.open .select-content,
+.payment-dropdown.open .select-content {
+    display: block;
+}
+
+/* filter-container end */
+
+.paymentsettings .quantity_selector_btn a.btn,
+.paymentsettings .product_option_selector_btn a.btn {
+    background-color: #2F333B !important;
+}
+
+.currency-column .currency-dropdown ul::-webkit-scrollbar-thumb {
+    background: #202020; 
+    border-radius: 4px;
+    border: 2px solid #31333b; 
+}
+
+.currency-column .currency-dropdown ul::-webkit-scrollbar {
+    width: 8px;
+    background-color: #31333b;
+    border-radius: 4px;
+    border: 0;
+}
+
+.search-subproduct-selection-hightlight {
+    -webkit-box-shadow: -2px 3px 5px 0px rgba(141,183,199,0.27);
+    -moz-box-shadow: -2px 3px 5px 0px rgba(141,183,199,0.27);
+    box-shadow: -2px 3px 5px 0px rgba(141,183,199,0.27);
+}
+
+.search-subproduct-selection-show {
+    display:block !important;
+}
+
+.form-product-category-item {
+    margin: 0 0 24px 0;
+    padding: 12px 24px 18px 0 !important;
+    display: block;
+    font-size: 16px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    cursor: pointer;
+    position: relative;
+}
+
+.form-product-category-item.title_collapsed {
+    margin: 0 0 6px 0 !important;
+}
+
+.form-product-category-item .selected-items-icon,
+.isBuilder .form-product-category-item .selected-items-icon {
+    display: none;
+}
+
+.form-product-category-item.title_collapsed.has_selected_product .selected-items-icon {
+    display:inline;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 8px 10px 7px 28px;
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/shopping_bag.svg');
+    background-repeat: no-repeat;
+    background-position: top 7px left 8px;
+    background-size: 16px;
+    margin-left: 6px;
+    background-color: #2e69ff;
+}
+
+.form-product-category-item .selected-items {
+    display: block;
+}
+
+.form-product-category-item:after {
+    content: "";
+    display:block;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='10' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2357647E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 10px;
+    position: absolute;
+    right:0;
+    bottom: 17px;
+    border: 1px solid #d5dae8;
+    border-radius: 2px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    transform: rotate(180deg);
+}
+
+.form-product-category-item.title_collapsed:after  {
+    transform: rotate(360deg);
+}
+
+.form-product-item.not-category-found+.p_item_separator,
+.form-product-item.not-found+.p_item_separator {
+    display: none;
+}
+
+
+.category-head {
+    display: block;
+    color: #C6C8CC;
+    overflow: hidden;
+    padding: 12px 28px 12px 0;
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/collapse_icon.svg');
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center right -2px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.category-head.collepsed_category {
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/expand_icon.svg');
+    border-bottom: 1px solid #48515a;
+}
+
+.category-head.collepsed_category + .category-body{
+    display: none;
+}
+
+#builderProductList div:first-child .collepsed_category {
+    border-top: 0;
+}
+
+#builderProductList div:last-child .collepsed_category {
+    border-bottom: 0;
+}
+
+.category-head .left-side {
+    float: left;
+}
+
+.category-head .right-side {
+    float: right;
+    font-size: 13px;
+    color: #848d98;
+    line-height: 24px;
+}
+
+/*Card 2 colomun*/
+
+.card-2col div[data-wrapper-react="true"] {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.card-2col .form-product-item .form-product-container .form-sub-label-container label.form-sub-label,
+.card-2col .form-product-item .form-product-container .form-sub-label-container span.select_cont {
+    display: block;
+}
+.card-2col .form-product-item .form-product-container .form-sub-label-container label.form-sub-label {
+    white-space: normal !important;
+    height: auto !important;
+    min-height: auto !important;
+    line-height: 16px !important;
+    padding: 10px 0 6px;
+}
+.card-2col span.form-product-item {
+    width: calc(50% - 10px);
+    margin-bottom: 12px;
+}
+.card-2col .form-product-item + .p_item_separator {
+    display: none;
+}
+.card-2col .form-product-item.new_ui {
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+    border-radius: 3px;
+    padding: 0 0 0 28px;
+    margin: 0 0 20px 0;
+}
+
+.card-2col.subscription_cont .form-product-item.new_ui .form-product-item-detail.new_ui {
+    display: block !important;
+}
+.card-2col.subscription_cont .form-product-details {
+    padding-left: 0px;
+}
+.card-2col .select_border {
+    opacity: 1;
+}
+.card-2col .form-product-item.new_ui .form-product-item-detail.new_ui {
+    display: block !important;
+    margin-top: 0 !important;
+    padding: 0;
+}
+.card-2col .form-product-item.new_ui .form-product-container {
+    padding: 16px;
+    margin: 0 !important;
+}
+.card-2col .form-product-item.new_ui.show_subtotal .form-product-container {
+    padding: 16px 16px 34px 16px !important;
+    margin: 0 !important;
+}
+.card-2col .form-product-item .form-special-subtotal {
+    right: 7px;
+    bottom: 7px;
+    top: auto;
+}
+.card-2col .form-product-item.new_ui .form-product-container .form-product-name {
+    min-height: auto;
+    padding: 0;
+}
+.card-2col .form-product-item.new_ui .p_col {
+    position: absolute;
+    left: 10px;
+    top: 12px !important;
+}
+.card-2col .form-product-item.new_ui.show_image {
+    padding: 0;
+    display: block;
+}
+.card-2col .form-product-item.new_ui.show_image .p_image {
+    padding: 0;
+    float: none;
+    min-width: 120px;
+    max-height: 168px;
+    width: 100%;
+    height: 100%;
+}
+.card-2col .form-product-item.new_ui.show_image .image_zoom {
+    width: 100%;
+    height: 100%;
+}
+.card-2col .form-product-item.new_ui.show_image .image_area {
+    min-height: 168px;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border:0;
+    background-color: #F4F4F4;
+    border-bottom: 1px solid #F4F4F4;
+}
+.card-2col .form-product-item.new_ui.show_image .form-product-container .form-sub-label-container {
+    margin-right: 12px;
+    margin-top: 2px;
+}
+.card-2col .form-product-item.new_ui.show_image .form-product-container .form-product-description {
+    padding-right: 0px !important;
+    padding-top: 4px;
+}
+.card-2col .form-product-item.new_ui.show_image .title_description {
+    padding: 0;
+    min-height: auto;
+}
+.card-2col .form-product-item.new_ui .form-product-details {
+    padding-top: 4px;
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+}
+.card-2col .form-product-item.show_image .p_checkbox {
+    margin-top: 0;
+}
+.card-2col .payment_footer.new_ui {
+    margin: 10px 0;
+    position: relative;
+}
+.card-2col .form-product-category-item {
+    margin: 0 0 18px 0;
+    width: 100%;
+}
+.card-2col .payment_footer.new_ui .total_area {
+    padding-right: 0;
+}
+.card-2col .form-product-item.new_ui.sold_out_product .form-product-details,
+.card-2col .form-product-item.not_enough_stock_product .form-product-details {
+    display: flex !important;
+    width: 100%;
+    flex-direction: column;
+}
+.card-2col .form-product-item.new_ui .form-product-details .payment-badge {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 0;
+    position: relative;
+    max-width: 70px;
+}
+.card-2col .form-product-item.new_ui .form-product-details .payment-badge.just-sold-out-label {
+    max-width: 90px;
+}
+.card-2col .form-product-item.new_ui .form-product-details .payment-badge.not_enough_stock_product {
+    max-width: 126px;
+}
+.card-2col .form-product-item.new_ui.not_enough_stock_product .payment-badge {
+    display: block;
+    width: calc(100% - 36px);
+    padding-left: 26px;
+    margin-left: 18px;
+    margin-bottom: 18px;
+}
+/*Card 3 colomun*/
+.card-3col div[data-wrapper-react="true"] {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: stretch;
+}
+.card-3col span.form-product-item {
+    width: calc(33.333% - 8px);
+    margin-bottom: 12px;
+}
+.card-3col .p_item_separator {
+    display: none !important;
+}
+
+.card-3col .form-product-item .form-product-container .form-sub-label-container label.form-sub-label,
+.card-3col .form-product-item .form-product-container .form-sub-label-container span.select_cont {
+    display: block;
+}
+.card-3col .form-product-item .form-product-container .form-sub-label-container label.form-sub-label {
+    white-space: normal !important;
+    height: auto !important;
+    min-height: auto !important;
+    line-height: 16px !important;
+    padding: 10px 0 6px;
+}
+.card-3col .form-product-item + .p_item_separator {
+    display: none;
+}
+.card-3col  .form-product-item.new_ui {
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+    padding: 12px 14px 12px 44px;
+    border-radius: 3px;
+    margin: 0 12px 12px 0;
+}
+.card-3col .form-product-item.new_ui.on_col3 {
+    margin-right: 0;
+}
+.card-3col.subscription_cont .form-product-item.new_ui .form-product-item-detail.new_ui {
+    display: block !important;
+}
+.card-3col.subscription_cont .form-product-details {
+    padding-left: 0px;
+}
+.card-2col .p_item_separator,
+.card-3col .p_item_separator {
+    opacity: 0;
+}
+.card-3col .select_border {
+    opacity: 1;
+}
+.card-3col .form-product-item.new_ui .form-product-item-detail.new_ui {
+    display: block !important;
+    margin-top: 0 !important;
+    padding: 0;
+}
+.card-3col .form-product-item.new_ui .form-product-container {
+    padding: 10px;
+    margin: 0 !important;
+}
+.card-3col .form-product-item.new_ui.show_subtotal .form-product-container {
+    padding: 10px 10px 34px 10px !important;
+    margin: 0 !important;
+}
+.card-3col .form-product-item .form-special-subtotal {
+    top: auto;
+    bottom: 7px;
+    width: calc(100% + 20px) !important;
+    right: 7px;
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+.card-3col .form-product-item .form-special-subtotal .form-item-subtotal {
+    padding-right: 4px;
+}
+.card-3col .form-product-item.new_ui .form-product-container .form-product-name {
+    min-height: auto;
+    padding: 0 0 6px 0;
+}
+.card-3col .form-product-item .form-product-container .form-product-description {
+    padding-right: 0px;
+}
+.card-3col .form-product-item.new_ui .p_col {
+    position: absolute;
+    left: 10px;
+    top: 12px !important;
+}
+.card-3col .form-product-item.new_ui.show_image {
+    padding: 0 !important;
+    display: block;
+}
+.card-3col .form-product-item.new_ui:not(.show_image):not(.focusedProduct) {
+    padding: 0 8px 0 32px;
+}
+.card-3col .form-product-item.new_ui.show_image .form-product-container .form-sub-label-container {
+    margin-right: 10px;
+    margin-top: 2px;
+}
+.card-3col .form-product-item.new_ui.show_image .p_image {
+    padding: 0;
+    float: none;
+    width: 100%;
+    height: 148px;
+}
+.card-3col .form-product-item.new_ui.show_image .image_zoom {
+    width: 100%;
+    height: 100%;
+}
+.card-3col .form-product-item.new_ui.show_image .image_area {
+    min-height: 124px;
+    max-height: 148px;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border:0;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #F4F4F4;
+}
+.card-3col .form-product-item.new_ui.show_image .title_description {
+    padding-left: 0;
+    padding: 0;
+    min-height: auto;
+}
+.card-3col .form-product-item.new_ui .form-product-details {
+    padding-top: 4px;
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+}
+.card-3col .form-product-item.new_ui.show_image .form-product-container .form-product-description {
+    padding-right: 0 !important;
+}
+.card-3col .form-product-item.show_image .p_checkbox {
+    margin-top: 0;
+}
+.card-3col .form-product-item .p_checkbox {
+    margin-top: 0;
+}
+.card-3col .payment_footer.new_ui {
+    margin: 10px 0;
+    position: relative;
+}
+.card-3col .form-product-category-item {
+    margin: 0 0 18px 0;
+    width: 100%;
+}
+.card-3col .payment_footer.new_ui .total_area {
+    padding-right: 0;
+}
+.card-3col .form-product-item.new_ui.sold_out_product .form-product-details,
+.card-3col .form-product-item.not_enough_stock_product .form-product-details {
+    display: flex !important;
+    width: 100%;
+    flex-direction: column;
+}
+.card-3col .form-product-item.new_ui .form-product-details .payment-badge {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 0;
+    position: relative;
+    max-width: 70px;
+}
+.card-3col .form-product-item.new_ui .form-product-details .payment-badge.just-sold-out-label {
+    max-width: auto;
+}
+.card-3col .form-product-item.new_ui .form-product-details .payment-badge.not_enough_stock_product {
+    max-width: auto;
+}
+.form-product-item.not-category-found,
+.card-2col .form-product-item.not-category-found.show_image,
+.card-3col .form-product-item.not-category-found.show_image,
+.form-product-item.not-category-found~br,
+.form-product-category-item.not-category-found,
+.form-product-category-item.not-category-found~br {
+    display: none !important;
+}
+
+.card-3col .form-product-item.new_ui.not_enough_stock_product .payment-badge {
+    display: block;
+    width: calc(100% - 24px);
+    padding-left: 26px;
+    margin-left: 12px;
+    margin-bottom: 12px;
+}
+
+/* Product list LAYOUT field //////////////// */
+
+@media screen and (max-width: 480px),
+screen and (max-device-width: 768px) and (orientation: portrait),
+screen and (max-device-width: 415px) and (orientation: landscape) {
+    .card-3col div[data-wrapper-react="true"],
+    .card-2col div[data-wrapper-react="true"] {
+        flex-direction: column;
+    }
+    .card-3col .form-product-item.new_ui,
+    .card-2col .form-product-item.new_ui {
+        width: 100%;
+    }
+    .form-label-top,
+    .form-label-top.search-enabled,
+    .form-label-top.category-enabled,
+    .form-label-top.search-enabled.category-enabled {
+        padding-right: 4px !important;
+    }
+    #productSearch-input {
+        margin-bottom: 8px;
+    }
+    .form-product-category-item  {
+        width: 100%;
+    }
+    .p-filter-three-column + .form-input-wide #productSearch-input,
+    .p-filter-three-column + .form-input-wide #payment-category-dropdown .select-content,
+    .p-filter-three-column + .form-input-wide .payment-dropdown .select-content,
+    .p-filter-two-column + .form-input-wide #payment-category-dropdown,
+    .p-filter-two-column + .form-input-wide #productSearch-input,
+    .p-filter-two-column + .form-input-wide #payment-sorting-products-dropdown,
+    .p-filter-two-column + .form-input-wide #payment-category-dropdown .select-content,
+    .p-filter-two-column + .form-input-wide .payment-dropdown .select-content{
+        width: 100% !important;
+        left: 0;
+        right: 0;
+    }
+    .p-filter-one-column + .form-input-wide .filter-container #payment-category-dropdown,
+    .p-filter-one-column + .form-input-wide .filter-container #payment-sorting-products-dropdown,
+    .p-filter-one-column + .form-input-wide #payment-category-dropdown .select-content,
+    .p-filter-one-column + .form-input-wide .payment-dropdown .select-content {
+        width: 100%;
+    }
+    .p-filter-two-column + .form-input-wide .filter-container {
+     flex-direction: column;
+    }
+    .p-filter-two-column + .form-input-wide .filter-container > :first-child {
+        margin-bottom: 8px;
+    }
+    .p-filter-three-column + .form-input-wide .filter-container {
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .p-filter-three-column + .form-input-wide .filter-container #payment-category-dropdown {
+        width: calc(100% - 50px) !important;
+    }
+    
+    .p-filter-three-column ~ .form-input-wide .filter-container #payment-sorting-products-dropdown {
+        width: 40px !important;
+    }
+    .p-filter-three-column ~ .form-input-wide .filter-container #payment-sorting-products-dropdown .dropdown-hint,
+    .p-filter-three-column ~ .form-input-wide .filter-container #payment-sorting-products-dropdown .selected-value {
+        display: none;
+    }
+}
+
+/* This style block must move to generalized product list stylesheet*/
+.portalShopping_favButton {
+    display: none;
+}
+
+.portalShopping_favButtonLabel {
+    cursor: pointer;
+}
+
+.portalShopping_favButtonLabel svg {
+    width: 18px;
+    height: 15px;
+    fill: #fff;
+    stroke: #0A1551;
+    transition: .3s fill stroke ease;
+}
+
+.portalShopping_favButton:checked + .portalShopping_favButtonLabel svg {
+    fill: #FF2D55;
+    stroke: #FF2D55;
+    transition: .3s fill stroke ease;
+}

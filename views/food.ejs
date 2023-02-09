@@ -1,0 +1,83 @@
+<!-- swite : swite, Starter : Starter, MainCourse : MainCourse, Gravy: Gravy, -->
+
+<div class="OderPage">
+  <div>
+    <div>
+      <div id="manu" class="Text_name">
+        <div class="Text-manu glass">Manu</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sweets">
+    <div>
+      <div id="sweets" class="Text_name">
+        <div class="Text_style"> SWEETS!</div>
+      </div>
+    </div>
+
+
+    <div>
+      <ul class="All_food" id="Project">
+
+        <li class="Item_List"> <%- include('foodCad',{item : swite,}) %></li>
+
+      </ul>
+    </div>
+  </div>
+
+
+  <div>
+    <div>
+      <div id="mugha" class="Text_name">
+        <div class="Text_style1"> Mughal!</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <ul class="All_food" id="Project">
+
+      <li class="Item_List"> <%- include('foodCad',{item : Starter, }) %></li>
+
+    </ul>
+  </div>
+
+
+  <div>
+    <div>
+      <div id="food" class="Text_name">
+        <div class="Text_style2"> Main food!</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <ul class="All_food" id="Project">
+
+      <li class="Item_List"> <%- include('foodCad',{item : MainCourse, }) %>
+      </li>
+
+    </ul>
+  </div>
+
+
+  <div>
+    <div>
+      <div id="curry" class="Text_name">
+        <div class="Text_style3"> Curry!</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <ul class="All_food" id="Project">
+
+      <li class="Item_List"> <%- include('foodCad',{ item : Gravy, }) %></li>
+
+    </ul>
+  </div>
+
+
+
+</div>

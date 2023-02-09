@@ -1,0 +1,71 @@
+
+.Login{
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(320deg,#c5f221,#40e9bf,#64a164);
+    padding: 20px;
+    background-image: url(https://elispot.biz/800/600/https/www.itziardigon.com/wp-content/uploads/398589-PCOFR6-312.jpg);
+    height: max-content;
+    background-repeat: no-repeat;
+    border-radius: initial;
+    border: 2px solid black;
+   
+}
+
+.Text_style3.logintext{
+    color: #fdfdfd;
+}
+.Header{
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    margin: 20px;
+    color: red;
+    margin: 10px;
+}
+
+.Header i{
+    color: green;
+    padding: 10px;
+}
+
+.Input-login{
+    width: 250px;
+    text-align: center;
+    font-size: 20px;
+    margin: 15px;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+.Input-login .input{
+    width: 200px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background-color: rgba(165, 42, 42, 0);
+    
+}
+
+.custom{
+    border-radius: 30px;
+    margin: 20px 20px 0px 20px;
+    padding: 5px 50px;
+    font-weight: bold;
+
+    
+}
+
+.forgot{
+    display: grid;
+    grid-template-columns:300px;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.forgot a{
+    text-decoration: none;
+}

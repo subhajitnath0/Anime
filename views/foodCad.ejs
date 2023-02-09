@@ -1,0 +1,52 @@
+    <% for (var index=0; index < item.length ; index++ ){ %>
+
+      <div id="cad<%= item[index].Id %>" class="food">
+        <div class="foodCad">
+          <div class="foodImg">
+            <img src=" <%= item[index].Link %> " alt="">
+          </div>
+    
+          <div class="Space"></div>
+    
+          <div class="foodDitalse glass">
+            <div class="brand-rating">
+              <div>
+                <i class="foodName"><%= item[index].Name %></i>
+              </div>
+    
+              <div class="ratingValue">
+                <i id="Star"><%= item[index].Star %>  <i class="fa fa-star" style="font-size:15px; color: rgb(255, 255, 254); "></i></i>
+              </div>
+            </div>
+    
+            <div class="food-Star">
+              <i class="foodPrice">₹ <%= item[index].RS %></i>
+              <!-- <div class="rating">
+                
+              </div> -->
+            </div>
+    
+            <form action="/Buy" method="post">
+              <div class="counterBox">
+                <div class="counter">
+                  <button type="button" class="down" onClick='decreaseCount(event, this)'>-</button>
+                  <input type="text" name="Quantity" value="0" required>
+                  <button type="button" class="up" onClick='increaseCount(event, this)'>+</button>
+                </div>
+              </div>
+              <input type="hidden" id="custId" name="Id" value=" <%= item[index].Id %> ">
+              <input type="hidden" id="custId" name="Rs" value=" <%= item[index].RS %> ">
+              <input type="hidden" id="custId" name="Name" value=" <%= item[index].Name %> ">
+
+              
+              <button class="buyNow" type="submit">Buy Now</button>
+            </form>
+    
+          </div>
+    
+    
+        </div>
+      </div>
+    
+    <%}%>
+   

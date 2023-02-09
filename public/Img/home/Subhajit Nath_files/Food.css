@@ -1,0 +1,184 @@
+ul {
+    display: inline;
+}
+
+.All_food{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+    margin: 0px;
+
+}
+
+.Item_List {
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap: 20px;
+    justify-content: center;
+    text-align: justify;
+    position: relative;
+
+}
+
+
+
+*,
+::after,
+::before {
+    box-sizing: content-box;
+}
+
+
+.Text_name {
+    padding: 20px;
+    margin: 0px;
+    font-size: 30px;
+    font-family: 'Hind Siliguri', sans-serif;
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+}
+
+
+.Text_style {
+
+    white-space: nowrap;
+    font-weight: bold;
+    overflow: hidden;
+    letter-spacing: 5px;
+    border-right: 4px solid rgb(0, 43, 0);
+    animation: text 5s steps(16) alternate infinite;
+    color: rgb(255, 255, 255);
+}
+
+
+@keyframes text {
+    0% {
+        width: 0;
+    }
+
+    90% {
+        width: 9ch;
+    }
+
+    100% {
+        width: 9ch;
+    }
+}
+
+
+.Text_style1 {
+
+    white-space: nowrap;
+    font-weight: bold;
+    overflow: hidden;
+    letter-spacing: 5px;
+    border-right: 4px solid rgb(0, 43, 0);
+    animation: text1 5s steps(16) alternate infinite;
+    color: rgb(253, 253, 253);
+}
+
+
+@keyframes text1 {
+    0% {
+        width: 0;
+    }
+
+    90% {
+        width: 9ch;
+    }
+
+    100% {
+        width: 9ch;
+    }
+}
+
+
+.Text_style2 {
+
+    white-space: nowrap;
+    font-weight: bold;
+    overflow: hidden;
+    letter-spacing: 5px;
+    border-right: 4px solid rgb(0, 43, 0);
+    animation: text2 5s steps(16) alternate infinite;
+    color: rgb(255, 255, 255);
+}
+
+
+@keyframes text2 {
+    0% {
+        width: 0;
+    }
+
+    90% {
+        width: 11.5ch;
+    }
+
+    100% {
+        width: 11.5ch;
+    }
+}
+
+
+.Text_style3 {
+
+    white-space: nowrap;
+    font-weight: bold;
+    overflow: hidden;
+    letter-spacing: 5px;
+    border-right: 4px solid rgb(0, 43, 0);
+    animation: text3 5s steps(16) alternate infinite;
+    color: rgb(255, 255, 255);
+}
+
+
+@keyframes text3 {
+    0% {
+        width: 0;
+    }
+
+    90% {
+        width: 6.5ch;
+    }
+
+    100% {
+        width: 6.5ch;
+    }
+}
+
+
+.OderPage{
+    background: linear-gradient(320deg,#f27121,#e94057,#8a2387);
+}
+
+
+
+.Text-manu{
+
+    color: white;
+    margin-top: 50px;
+    padding: 5px 30%;
+    border-radius: 16px;
+    transform: rotate(.02turn);
+
+}
+
+.Text-manu:hover{
+
+    color: white;
+    padding: 5px 30%;
+    border-radius: 16px;
+    transform: rotate(.0turn);
+
+
+}
+
+.sweets{
+
+}

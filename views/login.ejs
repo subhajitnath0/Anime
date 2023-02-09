@@ -1,0 +1,44 @@
+<div id="login" class="Login">
+    <div class="glass">
+        
+        <div id="sweets" class="Text_name">
+            <div class="Text_style3 logintext">Login</div>
+        </div>
+
+        <form action="/login" class="login-from" method="post">
+            <h1 class="Header"> Have an account?
+                <br><i>Login</i>
+            </h1>
+
+            <div class="Input-login">
+                <i class="fa-regular fa-user"></i>
+                <input type="text" class="input" name="username" placeholder="Username" required>
+            </div>
+            <div class="Input-login">
+                <i class="fa-sharp fa-solid fa-lock"></i>
+                <input type="password" class="input" name="password" placeholder="Password" required>
+            </div>
+
+            <button type="submit" class="btn btn-outline-light custom"><i class="fas fa-sign-in-alt" style="padding: 5px;"></i>Login</button>
+
+        </form>
+
+        <div class="forgot">
+            <a href="#">Forgot password?</a>
+            <h1 class="Header"><i>OR</i></h1>
+        </div>
+    
+    
+    <form action="/mobile" aria-hidden="true" class="" method="post">
+
+        <div class="Input-login">
+            <i class="fa-solid fa-phone"></i>
+            <input class="input" name="number" id="exampleFormControlInput1" placeholder="Mobile Number" type="text"
+                maxlength="10" pattern="\d{10}" title="Please enter exactly 10 digits" required>
+        </div>
+        <button type="submit" class="btn btn-outline-light custom"> <i class="fa fa-user-plus" style="padding: 5px;"></i> SignUp</button>
+
+    </form>
+   </div>
+
+</div>

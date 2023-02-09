@@ -1,0 +1,116 @@
+<%- include('header') %>
+    <div class="by">
+
+
+        <div class="bill glass">
+            <h3>Order Now</h3>
+            <h5>Subhajit Nath</h5>
+            <div class="billf">
+                <P class="">
+                    tajpur tagpur hooghly
+                </P>
+                <P class="right">
+                    PIN Code: 712415;
+                </P>
+            </div>
+
+            <div class="billf">
+                <P class="">
+                    Item Name :
+                </P>
+                <P class="right">
+
+                    <%= Ditails.ItemName %>
+                </P>
+            </div>
+
+            <div class="billf">
+                <P class="">
+                    Price :
+                </P>
+                <P class="right">
+                    <%= Ditails.RS %>
+                </P>
+            </div>
+
+            <div class="billf">
+                <P class="">
+                    Quantity :
+                </P>
+                <P class="right">
+                    <%= Ditails.Quantity %>
+                </P>
+            </div>
+
+
+            <div class="billf">
+                <P class="">
+                    TotalPrice :
+                </P>
+                <P class="right">
+                    <%= Ditails.TotalPrice %>
+                </P>
+            </div>
+
+            <a href="/">
+                <button type="submit" class="btn btn-outline-dark custom">
+                    <div class="amount-btn">
+                        Cancal
+                    </div>
+                </button>
+            </a>
+
+        </div>
+
+        <div class="bill glass">
+
+            <form action="/rating" method="post">
+                <h1 class="Pay">Pay Now</h1>
+
+                <div class="card-row">
+                    <span class="visa"></span>
+                    <span class="mastercard"></span>
+                    <span class="amex"></span>
+                    <span class="discover"></span>
+                </div>
+                <div class="amount">Payment amount</div>
+
+                <div class="amount">
+                    RS: <%= Ditails.TotalPrice %> /-
+                </div>
+
+                <div class="amount">
+                    Card Details
+                </div>
+                <div class="Input-cad Input-login">
+                    <i class="fa fa-user fa-lg"></i>
+                    <input type="text" class="input" name="CardHolder" placeholder="Card Holder Name" required>
+                </div>
+                <div class="Input-cad Input-login">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <input class="input" name="number" id="exampleFormControlInput1" placeholder="16 Digit Card Number"
+                        type="password" maxlength="16" pattern="\d{16}" title="Please enter exactly 10 digits" required>
+                </div>
+
+                <div class="Input-cad Input-login">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <input type="text" class="input" name="inputExpDate" id="inputExpDate" placeholder="MM / YY"
+                        maxlength='7'>
+                </div>
+
+                <div class="Input-cad Input-login">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <input type="password" class="input" maxlength="4" class="cvv" placeholder="CVV">
+                </div>
+
+                <button type="submit" class="btn btn-outline-dark custom">
+                    <div class="amount-btn">
+                        RS: <%= Ditails.TotalPrice %> /-
+                    </div>
+                </button>
+
+            </form>
+        </div>
+
+    </div>
+    <%- include('footer') %>

@@ -1,0 +1,209 @@
+.fa-star {
+    color: #ffffff;
+    margin: 0px;
+   
+
+}
+
+.fa.fa-star.star {
+    color: rgb(235, 252, 1);
+}
+
+#Star{
+    color: rgb(255, 255, 254);
+    padding: 10px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+.foodCad {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(235, 235, 235);
+    
+    
+   
+}
+
+
+.foodImg {
+    position: absolute;
+    width: 300px;
+    z-index: 2;
+    
+    
+}
+
+.foodImg img{
+    margin-left: auto;
+    margin-right: auto ;
+    border-radius: 100%;
+    border: 5px solid rgba(0, 0, 0, 0.288);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px -10px -50px -10px rgba(5, 5, 5, 0.5);
+    display: block;
+    width: 200px;
+    height: 200px;
+
+}
+
+.Space{
+    height: 100px;
+    width: 300px;
+}
+
+.foodDitalse {
+    padding: 20px;
+    padding-top: 120px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.288);
+}
+
+.foodName{
+    
+    padding: 5px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: left;
+   text-align: left;
+    padding-top: 10px;
+}
+
+.foodPrice{
+
+    padding: 5px;
+    margin: 10px;
+    font-size: 20px;
+
+}
+.rating{
+    padding: 10px 0px;
+    align-items: center; 
+    margin-top: 5px;   
+ }
+
+
+ .ratingValue{
+    border: 2px solid rgb(252, 250, 250);
+    display: inline;
+    padding: 5px 0px;
+    margin: 5px;
+    background-color:green;
+    border-radius: 15px ;
+    
+    
+    
+
+ }
+
+ .ratingValue input{
+    width: 20px;
+    padding:0px 5px;
+    margin: 0px;
+    font-size: 25px;
+    background-color: green;
+    color: white;
+    border-radius: 15px ;
+    border: none;
+
+ }
+.counter{
+    border: 2px solid black;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    float: right;
+    background-color: black;
+    border-radius: 15px ;
+}
+
+.counter input, .down, .up {
+    width: 20px;
+    padding:0px 3px;
+    margin: 0px;
+    border: .5px solid rgb(8, 8, 8);
+    font-size: 20px;
+    background-color: black;
+    color: white;
+   
+    
+}
+
+
+.down{
+    border-radius: 15px 0px 0px 15px;
+    font-weight: bolder;
+}
+
+ .up{
+    border-radius: 0px 15px 15px 0px;
+ }
+
+ .buyNow{
+    width: 130px;
+    padding:5px 0px;
+    margin: 0px;
+    border: .5px solid white;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+ }
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+ .foodDitalse:hover {
+    padding: 20px;
+    padding-top: 120px;
+    background-color:rgba(128, 128, 128, 0.329);
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.527);
+}
+
+
+
+
+
+
+
+
+
+.food-Star{
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+
+.brand-rating{
+    display: grid;
+    grid-template-columns: auto 80px;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+ 

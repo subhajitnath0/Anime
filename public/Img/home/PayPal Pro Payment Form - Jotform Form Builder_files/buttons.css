@@ -1,0 +1,685 @@
+/********* Simple White **********/
+
+.form-submit-button-simple_white {
+    text-shadow:1px 1px 0px #ffffff;
+	background: linear-gradient(to top, #ededed 0%, #dfdfdf 100%);
+}
+
+.form-submit-button-simple_white:hover, .form-submit-button-simple_white:active {
+	background: linear-gradient(to top, #fafafa 0%, #ebebeb 100%);
+}
+
+/********* Simple Grey **********/
+
+.form-submit-button-simple_grey {
+    color: #ffffff;
+    text-shadow: -1px -1px 0px #333333;
+    border: 1px solid #555555;
+	box-shadow:inset 0px 1px 0px 0px #b2b2b2;
+	background: linear-gradient(to top, #888888 0%, #575757 100%);
+}
+
+.form-submit-button-simple_grey:hover, .form-submit-button-simple_grey:active {
+	background: linear-gradient(to top, #989898 0%, #676767 100%);
+}
+
+/********* Simple Black **********/
+
+.form-submit-button-simple_black {
+    color: #ffffff;
+    text-shadow: -1px -1px 0px #000000;
+    border: 1px solid #000000;
+	box-shadow: inset 0px 1px 0px 0px #999999;
+	background: linear-gradient(to top, #666666 0%, #000000 100%);
+}
+
+.form-submit-button-simple_black:hover, .form-submit-button-simple_black:active {
+	background: linear-gradient(to top, #808080 0%, #1a1a1a 100%);
+}
+
+/********* Simple Pink **********/
+
+.form-submit-button-simple_pink {
+    color: #ffffff;
+    text-shadow: -1px -1px 0  #c70042;
+    border: 1px solid #cc0447;
+	box-shadow: inset 0 1px 0 0 #faafd4;
+	background: linear-gradient(to top, #ff5c92 0%, #f00252 100%);
+}
+
+.form-submit-button-simple_pink:hover, .form-submit-button-simple_pink:active {
+	background: linear-gradient(to top, #ff5ca0 0%, #ff036c 100%);
+}
+
+/********* Simple Rose **********/
+
+.form-submit-button-simple_rose {
+    color: #ffffff;
+    text-shadow:-1px -1px 0px #b23d35;
+    border:1px solid #d83526;
+	box-shadow:inset 0px 1px 0px 0px #f7c4c0;
+	background: linear-gradient(to top, #fc8d83 0%, #e4685d 100%);
+}
+
+.form-submit-button-simple_rose:hover, .form-submit-button-simple_rose:active {
+    color: #ffffff;
+	background: linear-gradient(to top, #ffa69e 0%, #ee776d 100%);
+}
+
+/********* Simple Red **********/
+
+.form-submit-button-simple_red {
+    color: #ffffff;
+    text-shadow: -1px -1px 0px #a60000;
+    border: 1px solid #a60000;
+	box-shadow: 0px 1px 0px 0px #f29d93;
+	background: linear-gradient(to top, #fe1900 0%, #ce0000 100%);
+}
+
+.form-submit-button-simple_red:hover, .form-submit-button-simple_red:active {
+	background: linear-gradient(to top, #ff461d 0%, #e60d00 100%);
+}
+
+/********* Simple Blue **********/
+
+.form-submit-button-simple_blue {
+    color: #ffffff;
+    text-shadow:-1px -1px 0px #003ea1;
+    border:1px solid #0d4aab;
+	box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	background: linear-gradient(to top, #3d94f6 0%, #1e62d0 100%);
+}
+
+.form-submit-button-simple_blue:hover, .form-submit-button-simple_blue:active {
+	background: linear-gradient(to top, #54a2f9 0%, #2e7be3 100%);
+}
+
+/********* Simple Carolina Blue **********/
+
+.form-submit-button-simple_carolina_blue {
+    color: #14396a;
+    text-shadow:1px 1px 0px #98d1f4;
+    border:1px solid #1e63a2;
+	box-shadow:inset 0px 1px 0px 0px #bee3f9 ;
+	background: linear-gradient(to top, #63b9ee 0%, #468dcf 100%);
+}
+
+.form-submit-button-simple_carolina_blue:hover, .form-submit-button-simple_carolina_blue:active {
+    color: #14396a;
+	background: linear-gradient(to top, #74c4f6 0%, #509cd9 100%);
+}
+
+/********* Simple Green **********/
+
+.form-submit-button-simple_green {
+    color: #154d0c;
+    text-shadow:1px 1px 0px #aade7c;
+    border:1px solid #268a16;
+	box-shadow:inset 0px 1px 0px 0px #c9efab;
+	background: linear-gradient(to top, #7bd82f 0%, #4ea20a 100%);
+}
+
+.form-submit-button-simple_green:hover, .form-submit-button-simple_green:active {
+   	color: #154d0c;
+	background: linear-gradient(to top, #80dd32 0%, #5bb215 100%);
+}
+
+/********* Simple Green Apple **********/
+
+.form-submit-button-simple_green_apple {
+    color: #ffffff;
+    text-shadow:-1px -1px 0px #5a8200;
+    border:1px solid #5a8200;
+	box-shadow:inset 0px 1px 0px 0px #b9e84b;
+	background: linear-gradient(to top, #96d10c 0%, #6d9c01 100%);
+}
+
+.form-submit-button-simple_green_apple:hover, .form-submit-button-simple_green_apple:active {
+    color: #ffffff;
+	background: linear-gradient(to top, #9ed915 0%, #78aa04 100%);
+}
+
+/********* Simple Yellow **********/
+
+.form-submit-button-simple_yellow {
+    color: #d85d00;
+    text-shadow:1px 1px 0px #ffed66;
+    border:1px solid #ffaa22;
+	box-shadow:inset 0px 1px 0px 0px #fff6af;
+	background: linear-gradient(to top, #ffed64 0%, #ffab23 100%);
+}
+
+.form-submit-button-simple_yellow:hover, .form-submit-button-simple_yellow:active {
+    color: #d85d00;
+	background: linear-gradient(to top, #feed83 0%, #ffbc34 100%);
+}
+
+/********* Simple Orange **********/
+
+.form-submit-button-simple_orange {
+    color: #ffffff;
+    text-shadow:-1px -1px 0px #d85d00;
+    border:1px solid #d85d00;
+    box-shadow:inset 0px 1px 0px 0px #ffcc7a;
+	background: linear-gradient(to top, #faa51a 0%, #ff6c00 100%);
+}
+
+.form-submit-button-simple_orange:hover, .form-submit-button-simple_orange:active {
+    color: #ffffff;
+	background: linear-gradient(to top, #ffb53b 0%, #fc8d0f 100%);
+}
+
+/********* Light **********/
+
+.form-submit-button-light {
+    color: #7c868d;
+    text-shadow:1px 1px 0px #ffffff;
+    border:1px solid #dfdfdf;
+    box-shadow:inset 0 1px 0 0 #ffffff, 0 1px 1px 0 rgba(0, 0, 0, 0.40);
+    background: linear-gradient(to top, #fafafa 0%, #eaeaea 100%);
+}
+
+.form-submit-button-light:hover, .form-submit-button-light:active  {
+    color: #7c868d;
+    background: linear-gradient(to top, #ffffff 0%, #f4f4f4 100%);
+}
+
+/********* Light rounded **********/
+
+.form-submit-button-light_rounded {
+    border-radius:2em;
+    text-shadow:1px 1px 0px #ffffff;
+    border:1px solid #dfdfdf;
+    box-shadow:inset 0 1px 0 0 #ffffff, 0 1px 1px 0 rgba(0, 0, 0, 0.40);
+    background: linear-gradient(to top, #fafafa 0%, #eaeaea 100%);
+}
+
+.form-submit-button-light_rounded:hover, .form-submit-button-light_rounded:active  {
+    color: #7c868d;    
+    background: linear-gradient(to top, #ffffff 0%, #f4f4f4 100%);
+}
+
+/********* Cool Grey **********/
+
+.form-submit-button-cool_grey {
+    color: #f9fbfd;
+    border:1px solid #60646c;
+    box-shadow:inset 0 1px 0 0 rgba(255, 255, 255, 0.20), 0 1px 1px 0 rgba(0, 0, 0, 0.40);
+    background: linear-gradient(to top, #9799a0 0%, #787b83 100%); /* firefox */
+}
+
+.form-submit-button-cool_grey:hover, .form-submit-button-cool_grey:active {
+    color: #f9fbfd;
+    background: linear-gradient(to top, #b2b6c0 0%, #84878f 100%); /* firefox */
+}
+
+/********* Cool Grey Rounded**********/
+
+.form-submit-button-cool_grey_rounded {
+    border-radius:2em;
+    color: #f9fbfd;
+    text-shadow:-1px -1px 0px #414346;
+    border:1px solid #60646c;
+    box-shadow:inset 0 1px 0 0 rgba(255, 255, 255, 0.20), 0 1px 2px 0 rgba(0, 0, 0, 0.40);
+    background: linear-gradient(to top, #9799a0 0%, #787b83 100%);
+}
+
+.form-submit-button-cool_grey_rounded:hover, .form-submit-button-cool_grey_rounded:active {
+	color: #f9fbfd;
+    background: linear-gradient(to top, #b2b6c0 0%, #84878f 100%);
+}
+
+/********* Carbon **********/
+
+.form-submit-button-carbon {
+    border-radius:.3em;
+    text-shadow:-1px -1px 0px #0b0b0d;
+    border:1px solid #212325;
+    box-shadow:inset 0 1px 0 0 rgba(255, 255, 255, 0.20), 0 1px 2px 0 rgba(0, 0, 0, 0.44);
+    background: linear-gradient(to top, #44494c 0%, #2a2e30 100%);
+}
+
+.form-submit-button-carbon:hover, .form-submit-button-carbon:active {
+	color: #dadee5;
+    background: linear-gradient(to top, #5b6266 0%, #383d40 100%);
+}
+
+/********* Carbon rounded **********/
+
+.form-submit-button-carbon_rounded {
+    border-radius:2em;
+    color: #dadee5;
+    border:1px solid #212325;
+    box-shadow:inset 0 1px 0 0 rgba(255, 255, 255, 0.20), 0 1px 2px 0 rgba(0, 0, 0, 0.44);
+    background: linear-gradient(to top, #44494c 0%, #2a2e30 100%);
+}
+
+.form-submit-button-carbon_rounded:hover, .form-submit-button-carbon_rounded:active  {
+	color: #dadee5;
+    background: linear-gradient(to top, #5b6266 0%, #383d40 100%);
+}
+
+/********* Blue**********/
+
+.form-submit-button-blue {
+    border-radius:.3em;
+    color: #ffffff;
+    text-shadow:0 1px 0px #1e549d;
+    border:1px solid #3d7fb1;
+    box-shadow:inset 0 1px 0 0 rgba(255, 255, 255, 0.30), 0 1px 2px 0 rgba(0, 0, 0, 0.40);
+    background: linear-gradient(to top, #57a9eb 0%, #3871c0 100%);
+}
+
+.form-submit-button-blue:hover, .form-submit-button-blue:active  {
+	color: #ffffff;
+    background: linear-gradient(to top, #78c3ff 0%, #4c85d3 100%);
+}
+
+/********* Black Blue **********/
+
+.form-submit-button-black_blue {
+    color: #dadee5;
+    text-shadow:-1px -1px 0px #000000;
+    border:1px solid #000000;
+    box-shadow:inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 1px 2px 0 rgba(0, 0, 0, 0.44);
+    background: linear-gradient(to top, #2e2e2e 0%, #030303 100%);
+}
+
+.form-submit-button-black_blue:hover , .form-submit-button-black_blue:active {
+    color: #33a0ff;
+    text-shadow:-1px -1px 0px #000000, 0px 0px 3px rgba(51,160,255,0.5);
+    background: linear-gradient(to top, #404040 0%, #1a1a1a 100%);
+}
+
+/********* Black Glass **********/
+
+.form-submit-button-black_glass {
+    color: #dadee5;
+    text-shadow:-1px -1px 0px #2b3034;
+    border:1px solid #2b3034;
+    box-shadow:inset 0 1px 0 0 rgba(255, 255, 255, 0.50), 0 1px 2px 0 rgba(0, 0, 0, 0.44);
+    background: linear-gradient(to top, #7f8385 0%,#5c6064 50%,#4a4e51 51%,#515a66 100%);
+}
+
+.form-submit-button-black_glass:hover, .form-submit-button-black_glass:active  {
+	color: #dadee5;
+    background: linear-gradient(to top, #909598 0%,#70757a 50%,#60656a 51%,#6c7889 100%);
+}
+
+/********* Wood **********/
+
+.form-submit-button-wood {
+    color: #5e2003;
+    text-shadow:1px 1px 0px #eb9b58;
+    border:1px solid #91350a;
+    box-shadow:inset 0 1px 0 0 rgba(255, 255, 255, 0.40), 0 1px 1px 0 rgba(0, 0, 0, 0.40);
+    background: #c75e26;
+    background-image: url(../../images/wood.png);
+}
+
+.form-submit-button-wood:hover , .form-submit-button-wood:active {
+    color: #852d04;
+    background: #da936e;
+    background-image: url(../../images/wood-over.png);
+}
+
+/********* Wood 3D **********/
+
+.form-submit-button-wood_3d {
+    color: #5e2003;
+    text-shadow:1px 1px 0px #eb9b58;
+    border:none;
+    box-shadow:0 4px 0 0 #91350a, 0px 6px 2px 1px rgba(0, 0, 0, 0.40);
+    background: #c75e26;
+    background-image: url(../../images/wood.png);
+}
+
+.form-submit-button-wood_3d:hover, .form-submit-button-wood_3d:active {
+    color: #852d04;
+    background: #da936e;
+    background-image: url(../../images/wood-over.png);
+}
+
+/********* 3D Edgy Yellow **********/
+
+.form-submit-button-3d_edgy_yellow {
+    border-radius:.3em;
+    color: #864f0b;
+    text-shadow:0px 1px 0px #ffe245;
+    border:1px solid #b8882a;
+    box-shadow:inset 0px 1px 1px 0px rgba(255, 255, 255, 0.40), inset 0px 0px 3px 0px rgba(255, 255, 255, 0.40), 0 5px 0 0 #b8882a, 0px 9px 0px 0px rgba(0, 0, 0, 0.20);
+    background: #f8b838;
+}
+
+.form-submit-button-3d_edgy_yellow:hover, .form-submit-button-3d_edgy_yellow:active {
+	color: #864f0b;
+	background: #ffd842;
+}
+
+/********* Denim **********/
+
+.form-submit-button-denim_dark_blue {
+    border-radius:.2em;
+    color: #eae3d9;
+    text-shadow:0px -2px 0px #0b101d;
+    border:1px dashed #eae3d9;
+    box-shadow:0 0 0 3px #283045, 0 2px 0 3px #0b101d, 0 6px 3px 1px rgba(0, 0, 0, 0.40);
+    background: #4d4d4d;
+    background-image: url(../../images/denim.png);
+}
+
+.form-submit-button-denim_dark_blue:hover, .form-submit-button-denim_dark_blue:active {
+	color: #eae3d9;
+	background: #4d4d4d;
+    background-image: url(../../images/denim.png);
+}
+
+/********* Flat Round teal **********/
+
+.form-submit-button-flat_round_teal {
+    border-radius: 2em;
+    color: #e3dfd4;
+    border:2px solid #231f20;
+    background: #4b6e70;    
+}
+
+.form-submit-button-flat_round_teal:hover, .form-submit-button-flat_round_teal:active {
+        background: #5b8486;
+        color: #e3dfd4;
+}
+
+/********* Leather **********/
+
+.form-submit-button-leather_black {
+    border-radius: .5em;
+    text-shadow: 0px 2px 0px #000000;
+    border: 2px dashed #ffffff;
+    box-shadow: 0 0 0 4px #262626, 0 4px 0 4px #000000, 0 6px 3px 4px rgba(0, 0, 0, 0.40);
+    background: #4d4d4d;
+    background-image: url(../../images/leather.png);
+}
+
+.form-submit-button-leather_black:hover, .form-submit-button-leather_black:active {
+	color: #ffffff;
+	background: #4d4d4d;
+    background-image: url(../../images/leather.png);
+}
+
+/********* Metal Brushed **********/
+
+.form-submit-button-metal_brushed {
+    border-radius:.3em;
+    color: #2a2a2a;
+    text-shadow:0px 1px 0px #ffffff;
+    border:1px outset #999999;
+    box-shadow:inset 0 -1px 0 0 rgba(0, 0, 0, 0.60), inset 0 1px 0 0 rgba(255, 255, 255, 0.70), 0 2px 4px 0 rgba(0, 0, 0, 0.40);
+    background: #757575;
+    background-position: 50% 50%;
+    background-image: url(../../images/metal-brushed.png);
+}
+
+.form-submit-button-metal_brushed:hover, .form-submit-button-metal_brushed:active {
+    color: #000000;
+	background: #757575;
+    background-position: 50% 50%;
+    background-image: url(../../images/metal-brushed.png);
+}
+
+/********* Steel **********/
+
+.form-submit-button-steel {
+    border-radius:.5em;
+    color: #808080;
+    text-shadow:0px 1px 0px #ffffff;
+    border:1px solid #999999;
+    box-shadow:inset 0 1px 0 0 rgba(255, 255, 255, 0.70), 0 2px 4px 0 rgba(0, 0, 0, 0.40);
+    background: #d4d4d4;
+    background-position: 50% 50%;
+    background-image: url(../../images/steel.png);
+}
+
+.form-submit-button-steel:hover, .form-submit-button-steel:active {
+    color: #555555;
+    background: #d4d4d4;
+    background-position: 50% 50%;
+    background-image: url(../../images/steel.png);
+}
+
+/********* 3D Round Yellow **********/
+
+.form-submit-button-3d_round_yellow {
+    border-radius:2em;
+    color: #b75902;
+    text-shadow:0px 1px 0px #facf73;
+    border:1px solid #ca6014;
+    box-shadow:inset 0px 1px 0px 0px #ffdb91, 0 4px 0 0 #ca6014, 0px 6px 2px 1px rgba(0, 0, 0, 0.30);	
+    background: #febd25; 
+}
+
+.form-submit-button-3d_round_yellow:hover, .form-submit-button-3d_round_yellow:active {
+	color: #b75902;
+	background: #ffcb40;
+}
+
+/********* Big Green **********/
+
+.form-submit-button-big_green {
+    border-radius:.2em;
+    color: #eaf3ba;
+    text-shadow:0px 1px 0px #71802e;
+	text-transform:uppercase;
+    border:3px solid #8a9c38;
+	box-shadow:inset 0px 0px 0px 2px rgba(255, 255, 255, 0.35), 0px 0px 0px 4px rgba(0, 0, 0, 0.10);
+	background: linear-gradient(to top, #c8db6a 0%, #9fb644 100%);
+}
+
+.form-submit-button-big_green:hover, .form-submit-button-big_green:active {
+    color: #eaf3ba;
+	background: linear-gradient(to top, #d2e477 0%, #abc04f 100%);
+}
+
+/********* Book Blue 1 **********/
+
+.form-submit-button-book_blue1 {
+    border-radius:.2em;
+    color: #ffffff;
+    text-shadow:0px 1px 0px #2e4281;
+    border:1px solid #3d4f8b;
+	box-shadow:inset 0px 1px 0px 0px #c8d0e4, 0px 2px 2px 0px rgba(0, 0, 0, 0.30);
+	background: linear-gradient(to top, #8497c4 0%, #586ca5 100%);
+}
+
+.form-submit-button-book_blue1:hover, .form-submit-button-book_blue1:active {
+    color: #ffffff;
+	background: linear-gradient(to top, #9aacd6 0%, #6f82b5 100%);
+}
+
+/********* Book Blue 2 **********/
+
+.form-submit-button-book_blue2 {
+    border-radius:.2em;
+    color: #ffffff;
+    text-shadow:0px -1px 0px #142353;
+    border:1px solid #3d4f8b;
+	box-shadow:inset 0px 0px 0px 1px rgba(147, 187, 255, 0.30), 0px 2px 2px 0px rgba(0, 0, 0, 0.30);
+	background: linear-gradient(to top, #5277c8 0%, #305096 100%);
+}
+
+.form-submit-button-book_blue2:hover, .form-submit-button-book_blue2:active {
+    color: #ffffff;
+	background: linear-gradient(to top, #6f93e1 0%, #4668af 100%);
+}
+
+/********* Big Square Blue **********/
+
+.form-submit-button-big_square_blue {
+    color: #121828;
+    text-shadow:0px 1px 0px #89abd7;
+    border:1px solid #1d2031;
+	box-shadow:inset 1px 1px 0px 0px #a5bddf, 0px 2px 3px 0px rgba(0, 0, 0, 0.40);
+	background: linear-gradient(to top, #6891c9 0%, #4778bd 100%);
+}
+
+.form-submit-button-big_square_blue:hover, .form-submit-button-big_square_blue:active {
+    color: #121828;
+	background: linear-gradient(to top, #6e96d1 0%, #4f80c5 100%);
+}
+
+/********* Push Red **********/
+
+.form-submit-button-push_red {
+    border-radius:.5em;
+    color: #ffffff;
+    text-shadow:0px -1px 0px #770900;
+    border:3px solid #911208;
+	box-shadow:inset 0px 1px 1px 0px #ff9a50, 0px 0px 0px 3px #c8381f;
+	background: linear-gradient(to top, #ef4c26 0%,#dc4116 50%,#d02e17 51%,#b21109 100%);
+}
+
+.form-submit-button-push_red:hover, .form-submit-button-push_red:active {
+    color: #ffffff;
+	background: linear-gradient(to top, #ff6642 0%,#eb481b 50%,#df371f 51%,#c11f10 100%);
+}
+
+/********* Push White **********/
+
+.form-submit-button-big_white {
+    border-radius:.3em;
+    color: #999999;
+    text-shadow:0px 1px 0px #ffffff;
+    border:3px solid #ffffff;
+	box-shadow:0px 0px 0px 1px #d9d9d9, 0px 3px 7px 0px rgba(0, 0, 0, 0.40);
+	background: linear-gradient(to top, #e9e9e9 0%, #fbfbfb 100%);
+}
+
+.form-submit-button-big_white:hover, .form-submit-button-big_white:active {
+    color: #999999;
+	background: linear-gradient(to top, #f2f2f2 0%, #ffffff 100%);
+}
+
+/*css buttons for stripe connect*/
+.stripe-connect-btn {
+  display: inline-block;
+  margin-bottom: 1px;
+  background-image: -webkit-linear-gradient(#28A0E5, #015E94);
+  background-image: -moz-linear-gradient(#28A0E5, #015E94);
+  background-image: -ms-linear-gradient(#28A0E5, #015E94);
+  background-image: linear-gradient(#28A0E5, #015E94);
+  border: 0;
+  padding: 1px;
+  height: 30px;
+  text-decoration: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  user-select: none;
+}
+
+.stripe-connect-btn span {
+  display: block;
+  position: relative;
+  padding: 0 12px 0 44px;
+  height: 30px;
+
+  background: #1275FF;
+  background-image: -webkit-linear-gradient(#7DC5EE, #008CDD 85%, #30A2E4);
+  background-image: -moz-linear-gradient(#7DC5EE, #008CDD 85%, #30A2E4);
+  background-image: -ms-linear-gradient(#7DC5EE, #008CDD 85%, #30A2E4);
+  background-image: linear-gradient(#7DC5EE, #008CDD 85%, #30A2E4);
+
+  font-size: 14px;
+  line-height: 30px;
+  color: white;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+}
+
+.stripe-connect-btn span:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  width: 23px;
+  height: 24px;
+  margin-top: -12px;
+  background-repeat: no-repeat;
+  background-size: 23px 24px;
+}
+
+.stripe-connect-btn:active,.stripe-connect-btn:disabled {
+  background: #005D93;
+}
+
+.stripe-connect-btn:active span, .stripe-connect-btn:disabled span {
+  color: #EEE;
+  background: #008CDD;
+  background-image: linear-gradient(#008CDD, #008CDD 85%, #239ADF);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+/* encrypted form-submit-button icon, omer, 15-07-2015 */
+
+.form-submit-button.icon-encrypt {
+    position: relative;
+}
+
+.form-submit-button.icon-encrypt + button {
+    margin-left: 25px;
+}
+
+.form-submit-button.icon-encrypt:before  {
+    content: url("../../images/security-icon.png");
+    display: inline-block;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+
+    right: -36px;
+    top: 50%;
+    margin-top: -16px;
+    box-sizing: border-box;
+    padding-top: 4px;
+}
+
+.form-submit-button.icon-encrypt:after  {
+    content: attr(data-content);
+    display: none;
+    position: absolute;
+    width: 128px;
+    background-color: rgba(0, 0, 0, 0.85);
+    text-shadow: none;
+    color: #eee;
+    font-size: 10px;
+    top: 50%;
+    right: -166px;
+    padding: 5px 0 4px;
+    border-radius: 2px;
+    line-height: 15px;
+    margin-top: -12px;
+}
+
+.form-submit-button.icon-encrypt:hover:after {
+    display: inline-block;
+}
+
+.icon-encrypt ~ .form-submit-reset { margin-left: 32px; }
+
+/* Images*/
+
+.stripe-connect-btn span:before, .stripe-connect-btn.blue span:before {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAYCAYAAAARfGZ1AAAKRGlDQ1BJQ0MgUHJvZmlsZQAASA2dlndUFNcXx9/MbC+0XZYiZem9twWkLr1IlSYKy+4CS1nWZRewN0QFIoqICFYkKGLAaCgSK6JYCAgW7AEJIkoMRhEVlczGHPX3Oyf5/U7eH3c+8333nnfn3vvOGQAoASECYQ6sAEC2UCKO9PdmxsUnMPG9AAZEgAM2AHC4uaLQKL9ogK5AXzYzF3WS8V8LAuD1LYBaAK5bBIQzmX/p/+9DkSsSSwCAwtEAOx4/l4tyIcpZ+RKRTJ9EmZ6SKWMYI2MxmiDKqjJO+8Tmf/p8Yk8Z87KFPNRHlrOIl82TcRfKG/OkfJSREJSL8gT8fJRvoKyfJc0WoPwGZXo2n5MLAIYi0yV8bjrK1ihTxNGRbJTnAkCgpH3FKV+xhF+A5gkAO0e0RCxIS5cwjbkmTBtnZxYzgJ+fxZdILMI53EyOmMdk52SLOMIlAHz6ZlkUUJLVlokW2dHG2dHRwtYSLf/n9Y+bn73+GWS9/eTxMuLPnkGMni/al9gvWk4tAKwptDZbvmgpOwFoWw+A6t0vmv4+AOQLAWjt++p7GLJ5SZdIRC5WVvn5+ZYCPtdSVtDP6386fPb8e/jqPEvZeZ9rx/Thp3KkWRKmrKjcnKwcqZiZK+Jw+UyL/x7ifx34VVpf5WEeyU/li/lC9KgYdMoEwjS03UKeQCLIETIFwr/r8L8M+yoHGX6aaxRodR8BPckSKPTRAfJrD8DQyABJ3IPuQJ/7FkKMAbKbF6s99mnuUUb3/7T/YeAy9BXOFaQxZTI7MprJlYrzZIzeCZnBAhKQB3SgBrSAHjAGFsAWOAFX4Al8QRAIA9EgHiwCXJAOsoEY5IPlYA0oAiVgC9gOqsFeUAcaQBM4BtrASXAOXARXwTVwE9wDQ2AUPAOT4DWYgSAID1EhGqQGaUMGkBlkC7Egd8gXCoEioXgoGUqDhJAUWg6tg0qgcqga2g81QN9DJ6Bz0GWoH7oDDUPj0O/QOxiBKTAd1oQNYSuYBXvBwXA0vBBOgxfDS+FCeDNcBdfCR+BW+Bx8Fb4JD8HP4CkEIGSEgeggFggLYSNhSAKSioiRlUgxUonUIk1IB9KNXEeGkAnkLQaHoWGYGAuMKyYAMx/DxSzGrMSUYqoxhzCtmC7MdcwwZhLzEUvFamDNsC7YQGwcNg2bjy3CVmLrsS3YC9ib2FHsaxwOx8AZ4ZxwAbh4XAZuGa4UtxvXjDuL68eN4KbweLwa3gzvhg/Dc/ASfBF+J/4I/gx+AD+Kf0MgE7QJtgQ/QgJBSFhLqCQcJpwmDBDGCDNEBaIB0YUYRuQRlxDLiHXEDmIfcZQ4Q1IkGZHcSNGkDNIaUhWpiXSBdJ/0kkwm65KdyRFkAXk1uYp8lHyJPEx+S1GimFLYlESKlLKZcpBylnKH8pJKpRpSPakJVAl1M7WBep76kPpGjiZnKRcox5NbJVcj1yo3IPdcnihvIO8lv0h+qXyl/HH5PvkJBaKCoQJbgaOwUqFG4YTCoMKUIk3RRjFMMVuxVPGw4mXFJ0p4JUMlXyWeUqHSAaXzSiM0hKZHY9O4tHW0OtoF2igdRzeiB9Iz6CX07+i99EllJWV75RjlAuUa5VPKQwyEYcgIZGQxyhjHGLcY71Q0VbxU+CqbVJpUBlSmVeeoeqryVYtVm1Vvqr5TY6r5qmWqbVVrU3ugjlE3VY9Qz1ffo35BfWIOfY7rHO6c4jnH5tzVgDVMNSI1lmkc0OjRmNLU0vTXFGnu1DyvOaHF0PLUytCq0DqtNa5N03bXFmhXaJ/RfspUZnoxs5hVzC7mpI6GToCOVGe/Tq/OjK6R7nzdtbrNug/0SHosvVS9Cr1OvUl9bf1Q/eX6jfp3DYgGLIN0gx0G3QbThkaGsYYbDNsMnxipGgUaLTVqNLpvTDX2MF5sXGt8wwRnwjLJNNltcs0UNnUwTTetMe0zg80czQRmu836zbHmzuZC81rzQQuKhZdFnkWjxbAlwzLEcq1lm+VzK32rBKutVt1WH60drLOs66zv2SjZBNmstemw+d3W1JZrW2N7w45q52e3yq7d7oW9mT3ffo/9bQeaQ6jDBodOhw+OTo5ixybHcSd9p2SnXU6DLDornFXKuuSMdfZ2XuV80vmti6OLxOWYy2+uFq6Zroddn8w1msufWzd3xE3XjeO2323Ineme7L7PfchDx4PjUevxyFPPk+dZ7znmZeKV4XXE67m3tbfYu8V7mu3CXsE+64P4+PsU+/T6KvnO9632fein65fm1+g36e/gv8z/bAA2IDhga8BgoGYgN7AhcDLIKWhFUFcwJTgquDr4UYhpiDikIxQODQrdFnp/nsE84by2MBAWGLYt7EG4Ufji8B8jcBHhETURjyNtIpdHdkfRopKiDke9jvaOLou+N994vnR+Z4x8TGJMQ8x0rE9seexQnFXcirir8erxgvj2BHxCTEJ9wtQC3wXbF4wmOiQWJd5aaLSwYOHlReqLshadSpJP4iQdT8YmxyYfTn7PCePUcqZSAlN2pUxy2dwd3Gc8T14Fb5zvxi/nj6W6pZanPklzS9uWNp7ukV6ZPiFgC6oFLzICMvZmTGeGZR7MnM2KzWrOJmQnZ58QKgkzhV05WjkFOf0iM1GRaGixy+LtiyfFweL6XCh3YW67hI7+TPVIjaXrpcN57nk1eW/yY/KPFygWCAt6lpgu2bRkbKnf0m+XYZZxl3Uu11m+ZvnwCq8V+1dCK1NWdq7SW1W4anS1/+pDa0hrMtf8tNZ6bfnaV+ti13UUahauLhxZ77++sUiuSFw0uMF1w96NmI2Cjb2b7Dbt3PSxmFd8pcS6pLLkfSm39Mo3Nt9UfTO7OXVzb5lj2Z4tuC3CLbe2emw9VK5YvrR8ZFvottYKZkVxxavtSdsvV9pX7t1B2iHdMVQVUtW+U3/nlp3vq9Orb9Z41zTv0ti1adf0bt7ugT2ee5r2au4t2ftun2Df7f3++1trDWsrD+AO5B14XBdT1/0t69uGevX6kvoPB4UHhw5FHupqcGpoOKxxuKwRbpQ2jh9JPHLtO5/v2pssmvY3M5pLjoKj0qNPv0/+/tax4GOdx1nHm34w+GFXC62luBVqXdI62ZbeNtQe395/IuhEZ4drR8uPlj8ePKlzsuaU8qmy06TThadnzyw9M3VWdHbiXNq5kc6kznvn487f6Iro6r0QfOHSRb+L57u9us9ccrt08rLL5RNXWFfarjpebe1x6Gn5yeGnll7H3tY+p772a87XOvrn9p8e8Bg4d93n+sUbgTeu3px3s//W/Fu3BxMHh27zbj+5k3Xnxd28uzP3Vt/H3i9+oPCg8qHGw9qfTX5uHnIcOjXsM9zzKOrRvRHuyLNfcn95P1r4mPq4ckx7rOGJ7ZOT437j154ueDr6TPRsZqLoV8Vfdz03fv7Db56/9UzGTY6+EL+Y/b30pdrLg6/sX3VOhU89fJ39ema6+I3am0NvWW+738W+G5vJf49/X/XB5EPHx+CP92ezZ2f/AAOY8/wRDtFgAAADQklEQVRIDbWVaUiUQRjHZ96dXY/d1fYQj1U03dJSw9YkFgy6DIkILRArQSSC7PjQjQQqVH7oQ0GHQUWgpQhKHzoNSqiUwpXcsrwIjzVtPVrzbPV9Z6bZhYV3N3WXYAeGmWeeZ37z8J95GEgpBf5oeXn1Es4fYAdzPDlM6je4RBYhR+LMU89UxiCBGiCgkUwsBYSA+SlPKLQBQAYEAZm+3j42K96z3NyOF7VOeMrp62opRcacjPW5+43rDTpNSKQ8QKZAEg7xmPCTs/O27uGJgXuNbW0pxyvLfTmAEBzthEsFZLxRvPdi5rpYo2cmUiQJDA4IVeo0obGdlvGfXUPj0Sym2zPuHxvzcWjDyVupJ/YYizKTGNjLw/HiduNTAqIRIUJ6Vpp+ky8bCSFgwQ2xgkGxFi1ioNWEBGuJB31gbLIv/2pd7SpFoGxtpCYkLSEq4ptlzIYFO7tc7w0TKkeEYg5ADnrWkkYhD8s26GPq3nW0WKxTptftPYBI4Mj3O2fHvKNZBMVSDmMwarXNjDkSF3d5kExZeiCr8M2VI+VFu9IvsPcYtzAvkfoEZkEEE45jMppq3ppbCNPFIY1nD1cpo07lbMmvOXeoDCF8BLKy9uUAAjDkBh+c6bz78mNtVVP7MwET7JBnqb4xXpdWVpC1OVzWn+ELHLCsneX/s7rkRWl1463cy1U3WroG21jhCGKJXPOtKQnpAuENvsAppgDB3TcDVIrpDHbK5Kd+y7W8iodNybHh22rOHyxUK+UaMYjZaoyp25rYL54TSihSKmwZ14v3lc3ZFxdbeywjn/tGJnkmzrydX1ApxOEACKymmXLYfXVpi1JMEOGxPi1ep18doY4r2J7uFumQQ9yGf01bMcZW8dpyc0oIjxxpuC5wuUDX+ovWrnYeg3aXvdLIqnmOvXPsfH6uA5YbTb1DX8ofvTLzTy6ZV4K6fAw+gXiATfdffmjeaUgc1UdpdWplsCooQBrEnqUw82dhdnjit/Vxc4f59tP3DRjzJvYteqrl4rmNlJIfrOwpgNklesDRNQBCHYtQAQqD2CgACNjHAJnG1EyfV/S67fZiJB5t2OGEe4n7L3fS4fpEv/2hUEATfoPbuam5v8N7nps70YTbAAAAAElFTkSuQmCC");
+}
+
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+
+  .stripe-connect-btn span:before, .stripe-connect-btn.blue span:before {
+    background-image: url("data:image/png;base64,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");
+  }
+}
